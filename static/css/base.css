@@ -6,7 +6,7 @@ body {
     background: url('/media/pp_homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 264px);
-    color: #fff;
+    color: #744380;
     font-family: 'Lato';
 }
 
@@ -57,6 +57,14 @@ body {
     border: 1px solid #744380 !important;
 }
 
+.text-purple {
+    color: #744380 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
 .bg-purple {
     background-color: #744380 !important;
 }
@@ -70,9 +78,19 @@ body {
     color: #fff;
 }
 
+/* anchor tags purple */
+.purple-link {
+    color: #744380;
+}
+
 /* anchor tags hover */
 .white-link:hover {
     color: #fff;
+}
+
+/* anchor tags hover */
+.purple-link:hover {
+    color: #744380;
 }
 
 
@@ -85,11 +103,41 @@ body {
         color: #744380;
 }
 
+/* -------------change card for white background and purple foreground */
+.card-header-purple {
+    padding: $card-spacer-y $card-spacer-x;
+    margin-bottom: 0; // Removes the default margin-bottom of <hN>
+    color: $card-cap-color;
+    background-color: $card-cap-bg;
+    border-bottom: $card-border-width solid $card-border-color;
+
+    &:first-child {
+        @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+  }
+}
+  
+
+
 /* --------------------centre footer images */
 .footer-card {
     background-color: rgba(255,255,255,0);
     max-height: 180px;
     max-width: 180px;
+}
+
+.footer-card-purple {
+    max-height: 180px;
+    max-width: 180px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 
 /* -------------------------------- Media Queries */

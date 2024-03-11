@@ -124,9 +124,8 @@
         {% block content %}
         {% endblock content %}
 
-        <footer>
-            {% include 'includes/footer.html' %}
-        </footer>
+        {% block footer %}
+        {% endblock footer %}
         
         {% block postloadjs %}
         {% endblock postloadjs %}
