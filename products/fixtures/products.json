@@ -1,0 +1,673 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "Active Iron Pregnancy",
+            "brand": "Active Iron",
+            "description": "Active Iron Pregnancy is a specialized iron supplement tailored to meet the increased iron needs during pregnancy. Formulated with a unique iron complex, it supports gentle absorption without causing constipation or stomach upset commonly associated with traditional iron supplements. Its gentle formula ensures optimal iron levels for both maternal and fetal health throughout pregnancy.",
+            "price": 17.99,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "active-iron-pregnancy-300x300.jpg",
+            "large_image": "active-iron-pregnancy.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "name": "Aveeno Daily Moisturising Body Lotion",
+            "brand": "Aveeno",
+            "description": "Aveeno Daily Moisturising Body Lotion is enriched with natural colloidal oatmeal and emollients, providing intense hydration to dry skin for up to 24 hours. Its non-greasy formula absorbs quickly, leaving skin feeling soft, smooth, and nourished. Suitable for daily use, this lotion helps replenish skin's moisture barrier, restoring and maintaining its natural balance for healthier-looking skin.",
+            "price": 3.87,
+            "size": "200ml",
+            "category": 6,
+            "thumbnail": "active-iron-pregnancy-300x300.jpg",
+            "large_image": "active-iron-pregnancy.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "Aveeno Daily Moisturising Body Wash",
+            "brand": "Aveeno",
+            "description": "Aveeno Daily Moisturising Body Wash gently cleanses and nourishes the skin, leaving it feeling soft and replenished. Infused with natural colloidal oatmeal and a blend of natural oils, it effectively cleanses without stripping away essential moisture, making it ideal for dry and sensitive skin. Its soap-free formula lathers into a rich, creamy foam that soothes and moisturizes, leaving skin feeling refreshed and hydrated after every wash.",
+            "price": 5.54,
+            "size": "500ml",
+            "category": 6,
+            "thumbnail": "aveeno-daily-moisturising-body-lotion-200ml-300x300.jpg",
+            "large_image": "aveeno-daily-moisturising-body-lotion-200ml.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "b Bold Tan Lotion Dark",
+            "brand": "bBold",
+            "description": "bBold Tan Lotion Dark offers a natural-looking tan with a deep, bronzed finish. Formulated with skin-loving ingredients and vitamins A and E, it provides long-lasting hydration while delivering a streak-free tan. The quick-drying formula ensures even application and develops over time, allowing you to customize your desired tan intensity. Perfect for achieving a sun-kissed glow without exposure to harmful UV rays.",
+            "price": 9.95,
+            "size": "None",
+            "category": 6,
+            "thumbnail": "b-bold-tan-lotion-dark-300x300.jpg",
+            "large_image": "b-bold-tan-lotion-dark.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Berocca Boost",
+            "brand": "Berocca",
+            "description": "Berocca Boost is an effervescent multivitamin tablet packed with essential vitamins and minerals, including vitamin B, vitamin C, magnesium, and zinc. Designed to support energy levels and mental alertness, it provides a refreshing burst of vitamins to help you stay focused and energized throughout the day. The fast-dissolving formula makes it convenient for on-the-go use, ensuring you get the daily nutrients needed to maintain overall well-being and vitality.",
+            "price": 10.05,
+            "size": "15 pack",
+            "category": 7,
+            "thumbnail": "b-complex-sona-300x300.jpg",
+            "large_image": "b-complex-sona.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "name": "Boss Bottled Homme",
+            "brand": "Hugo Boss",
+            "description": "Boss Bottled Homme is a classic fragrance for men, exuding sophistication and confidence. With a blend of fruity and spicy notes, including apple, cinnamon, and sandalwood, it captivates the senses with its timeless appeal. Perfect for the modern gentleman, this signature scent is suitable for any occasion, leaving a lasting impression wherever you go.",
+            "price": 65,
+            "size": "100ml",
+            "category": 2,
+            "thumbnail": "berocca-boost-tablets-effervescent-15-300x300.jpg",
+            "large_image": "berocca-boost-tablets-effervescent-15.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "name": "Boss Orange Woman",
+            "brand": "Hugo Boss",
+            "description": "Boss Orange Woman is a vibrant and captivating fragrance designed for the modern woman. With notes of sweet apple, vanilla, and sandalwood, it offers a warm and feminine scent that is both refreshing and alluring. Perfect for everyday wear, this fragrance embodies confidence and individuality, making it an essential addition to any woman's perfume collection.",
+            "price": 36.5,
+            "size": "50ml",
+            "category": 2,
+            "thumbnail": "berocca-boost-tablets-effervescent-15-300x300.jpg",
+            "large_image": "berocca-boost-tablets-effervescent-15.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "name": "Brut Eau De Toilette",
+            "brand": "Brut",
+            "description": "Brut Eau De Toilette is a classic men's fragrance known for its bold and masculine scent. With hints of lavender, spice, and wood, it exudes confidence and sophistication. This timeless fragrance is suitable for any occasion, whether it's a casual outing or a formal event. With its long-lasting formula, Brut Eau De Toilette keeps you smelling fresh and confident throughout the day.",
+            "price": 8.5,
+            "size": "100ml",
+            "category": 4,
+            "thumbnail": "berocca-boost-tablets-effervescent-15-300x300.jpg",
+            "large_image": "berocca-boost-tablets-effervescent-15.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "name": "Clarins Eau Dymaisante",
+            "brand": "Clarins",
+            "description": "Clarins Eau Dynamisante is a revitalizing fragrance that energizes the body and mind. With essential oils and plant extracts, it offers a fresh and invigorating scent that awakens the senses. This unique fragrance can be applied all over the body, providing a burst of freshness and vitality. Perfect for those who enjoy a refreshing and uplifting fragrance experience.",
+            "price": 49,
+            "size": "100ml",
+            "category": 2,
+            "thumbnail": "brut-eau-de-toilette-100ml-300x300.jpg",
+            "large_image": "brut-eau-de-toilette-100ml.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "name": "De Facto Shaving Oil",
+            "brand": "De Facto",
+            "description": "De Facto Shaving Oil is a luxurious shaving oil designed to provide a smooth and comfortable shave. Formulated with nourishing oils and moisturizing ingredients, it helps to lubricate the skin and reduce irritation, leaving it feeling soft and hydrated. Suitable for all skin types, this shaving oil ensures a close and precise shave, while also promoting healthy-looking skin.",
+            "price": 15,
+            "size": "100ml",
+            "category": 4,
+            "thumbnail": "clarins-eau-dynamisante-fragrance-300x300.jpg",
+            "large_image": "clarins-eau-dynamisante-fragrance.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "name": "Digital Thermometer",
+            "brand": "Varies",
+            "description": "The Digital Thermometer is a handy medical device used to measure body temperature accurately and quickly. It typically features a digital display and a probe that is inserted orally, rectally, or under the armpit to obtain temperature readings. Digital thermometers are easy to use and provide results within seconds, making them suitable for home use and healthcare settings. They are often recommended for monitoring fevers in adults and children, aiding in the early detection of illnesses.",
+            "price": 10.95,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "clarins-eau-dynamisante-fragrance-300x300.jpg",
+            "large_image": "clarins-eau-dynamisante-fragrance.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "name": "Dylon All-in-1 Fabric Dye Pod Intense Black",
+            "brand": "Dylon",
+            "description": "Dylon All-in-1 Fabric Dye Pod in Intense Black offers a convenient solution for dyeing fabrics at home. This easy-to-use pod contains all the necessary dye and fixative agents, eliminating the need for messy powders or liquids. Simply add the pod to your washing machine along with the fabric you wish to dye, and let the machine work its magic. Ideal for refreshing old clothes or adding a new color to faded fabrics, this dye pod provides vibrant and long-lasting results.",
+            "price": 10.44,
+            "size": "None",
+            "category": 6,
+            "thumbnail": "clarins-eau-dynamisante-fragrance-300x300.jpg",
+            "large_image": "clarins-eau-dynamisante-fragrance.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "name": "Dylon Intense Black Hand Fabric Dye",
+            "brand": "Dylon",
+            "description": "Dylon Intense Black Hand Fabric Dye is a versatile dyeing solution for transforming fabrics by hand. Suitable for use on a wide range of materials, including cotton, linen, and viscose, it offers rich and deep black coloration that revitalizes old garments or creates custom designs. Easy to use, simply dissolve the dye in water and immerse the fabric for desired color intensity. Perfect for DIY enthusiasts and crafters looking to personalize their textiles with a professional finish.",
+            "price": 3.5,
+            "size": "None",
+            "category": 6,
+            "thumbnail": "dylon-intense-black-all-in-1-fabric-dye-300x300.jpg",
+            "large_image": "dylon-intense-black-all-in-1-fabric-dye.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "name": "Elave Sensitive Shower Gel",
+            "brand": "Elave",
+            "description": "Elave Sensitive Shower Gel is specially formulated for sensitive skin, providing gentle cleansing without causing irritation or dryness. Enriched with natural ingredients such as aloe vera and glycerin, it soothes and moisturizes the skin while effectively removing impurities. Free from harsh chemicals and fragrances, this hypoallergenic shower gel is suitable for daily use and helps to maintain the skin's natural balance, leaving it feeling clean, soft, and refreshed.",
+            "price": 7.3,
+            "size": "250ml",
+            "category": 3,
+            "thumbnail": "elave-sensitive-shower-gel-300x300.jpg",
+            "large_image": "elave-sensitive-shower-gel.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "name": "Eucerin Auto Control Lotion",
+            "brand": "Eucerin",
+            "description": "Eucerin Auto Control Lotion is a dermatologist-recommended moisturizer specially formulated for diabetic skin. Enriched with ingredients like urea and ceramides, it provides intense hydration and helps to repair the skin's natural barrier function. Clinically proven to reduce dryness and roughness, this non-greasy lotion absorbs quickly, leaving diabetic skin feeling smooth, soft, and healthy. Suitable for daily use, it helps to prevent skin complications associated with diabetes, such as dryness, cracking, and itching.",
+            "price": 15.17,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "elave-sensitive-shower-gel-300x300.jpg",
+            "large_image": "elave-sensitive-shower-gel.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "name": "Fashion Mask Reusable Adults",
+            "brand": "Varies",
+            "description": "Fashion Mask Reusable for Adults offers stylish and practical protection against airborne particles and pollutants. Made from high-quality fabrics such as cotton or polyester, these masks are designed to be breathable, comfortable, and washable for repeated use. They typically feature adjustable ear loops and a contoured design for a secure fit and enhanced comfort. Fashionable patterns and colors add a touch of personal style while providing essential protection in various environments, including public spaces, travel, and outdoor activities.",
+            "price": 4.99,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "elave-sensitive-shower-gel-300x300.jpg",
+            "large_image": "elave-sensitive-shower-gel.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "name": "Fashion Mask Reusable Kids",
+            "brand": "Varies",
+            "description": "Fashion Mask Reusable for Kids provides children with stylish and functional protection against airborne contaminants. Constructed from soft and breathable materials, such as cotton or polyester, these masks are designed to fit comfortably on smaller faces while offering effective filtration. Adjustable ear loops and nose wires ensure a secure and personalized fit, while fun designs and colors make wearing masks more enjoyable for children. Machine washable and reusable, these masks are ideal for everyday use at school, daycare, or outings, helping to keep kids safe and healthy.",
+            "price": 4.5,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "elave-sensitive-shower-gel-300x300.jpg",
+            "large_image": "elave-sensitive-shower-gel.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "name": "Gillette Mach-3 Blades",
+            "brand": "Gillette",
+            "description": "Gillette Mach-3 Blades are precision-engineered razor blades designed for a close and comfortable shave. Featuring three sharp blades and an advanced lubrication strip, they glide effortlessly over the skin, reducing irritation and providing a smooth shave with fewer strokes. The microfins and skin guard help to stretch the skin and prepare hair for a precise cut, while the open architecture allows for easy rinsing and cleaning. Compatible with Gillette Mach-3 razors, these blades deliver superior performance and long-lasting sharpness for a consistently smooth shave.",
+            "price": 10.5,
+            "size": "4 Pack",
+            "category": 4,
+            "thumbnail": "elave-sensitive-shower-gel-300x300.jpg",
+            "large_image": "elave-sensitive-shower-gel.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "name": "LA Girl Brow Pomade Salt Brown",
+            "brand": "LA Girl",
+            "description": "LA Girl Brow Pomade in Salt Brown is a creamy, waterproof pomade designed to sculpt and define eyebrows with precision. Formulated with long-lasting pigments, it fills in sparse areas and creates natural-looking brows that stay put all day. The smudge-proof formula glides on smoothly and dries to a matte finish, providing buildable coverage and a polished appearance. Complete with a dual-ended brush for effortless application, this brow pomade is ideal for achieving perfectly shaped brows that frame the face and enhance your overall look.",
+            "price": 9.5,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "infrared-thermometer-300x300.jpg",
+            "large_image": "infrared-thermometer.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "name": "LA Girl Pro Concealer Bisque",
+            "brand": "LA Girl",
+            "description": "LA Girl Pro Concealer in Bisque is a creamy, blendable concealer that camouflages imperfections and evens out skin tone. Enriched with vitamin E and lightweight emollients, it offers comfortable wear and long-lasting coverage without creasing or caking. The doe-foot applicator allows for precise application, making it easy to conceal dark circles, blemishes, and discoloration. Available in a wide range of shades to suit all skin tones, this versatile concealer delivers a natural-looking finish and a radiant complexion.",
+            "price": 6.95,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "LA-girl-brow-promade-300x300.jpeg",
+            "large_image": "LA-girl-brow-promade.jpeg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "name": "LA Girl Pro Concealer Natural",
+            "brand": "LA Girl",
+            "description": "LA Girl Pro Concealer in Natural is a versatile concealer that provides buildable coverage for a flawless complexion. Infused with vitamin E and hydrating ingredients, it conceals dark circles, blemishes, and other imperfections while nourishing the skin. The lightweight formula blends seamlessly into the skin, creating a smooth and natural-looking finish. Equipped with a convenient applicator wand, it allows for precise application and touch-ups throughout the day. Whether used alone or layered with foundation, this concealer helps to achieve a radiant and even skin tone.",
+            "price": 6.95,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "LA-girl-brow-promade-300x300.jpeg",
+            "large_image": "LA-girl-brow-promade.jpeg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "name": "LA Girl Pro Coverage Foundation Porcelain",
+            "brand": "LA Girl",
+            "description": "LA Girl Pro Coverage Foundation in Porcelain is a high-definition, long-wearing foundation that provides flawless coverage and a natural finish. Formulated with nourishing ingredients like vitamin E and hyaluronic acid, it hydrates and smooths the skin while evening out complexion. The lightweight formula is buildable, allowing for customizable coverage that lasts all day without feeling heavy or cakey. With a wide range of shades to choose from, this foundation caters to various skin tones and undertones, ensuring a perfect match for every individual. Whether used for everyday wear or special occasions, it delivers a radiant and photo-ready complexion.",
+            "price": 12.95,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "la-girl-pro-coverage-foundation-porcelain-300x300.jpg",
+            "large_image": "la-girl-pro-conealer-natural.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "name": "Lynx Africa Twin Pack",
+            "brand": "Lynx (also known as Axe outside of the UK and Ireland)",
+            "description": "Lynx Africa Twin Pack features two signature body sprays from the Lynx Africa range. With its distinctive blend of warm spices and woody notes, Lynx Africa offers a refreshing and invigorating fragrance that lasts all day. The twin pack provides double the freshness, ensuring you stay confidently fresh and fragrant throughout the day. Ideal for everyday use, these body sprays are perfect for men who want to make a lasting impression with their scent.",
+            "price": 6,
+            "size": "None",
+            "category": 4,
+            "thumbnail": "lynx-africa-twin-pack-300x300.jpg",
+            "large_image": "lynx-africa-twin-pack.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "name": "Macushield",
+            "brand": "MacuShield",
+            "description": "MacuShield is a unique eye supplement specially formulated to support macular health and vision. Developed by leading eye care experts, it contains a patented formula of antioxidants, vitamins, and carotenoids, including lutein, zeaxanthin, and meso-zeaxanthin. These nutrients help to replenish and protect the macular pigment, reducing the risk of age-related macular degeneration (AMD) and maintaining optimal visual function. MacuShield comes in easy-to-swallow capsules, making it convenient for daily use as part of a healthy lifestyle. Trusted by eye care professionals worldwide, it is clinically proven to enhance macular pigment density and support overall eye health.",
+            "price": 20.35,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "macushield-300x300.jpg",
+            "large_image": "macushield.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "name": "Max Factor Pan Stick Nouveau Beige",
+            "brand": "Max Factor",
+            "description": "Max Factor Pan Stick in Nouveau Beige is a versatile foundation stick that provides buildable coverage for a flawless complexion. With its creamy texture and blendable formula, it effortlessly conceals imperfections, evens out skin tone, and creates a smooth canvas for makeup application. The convenient stick format allows for precise application, making it easy to target problem areas and achieve a natural-looking finish. Whether used as a foundation, concealer, or contouring product, Max Factor Pan Stick delivers long-lasting coverage and a radiant complexion that lasts all day.",
+            "price": 6.99,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "macushield-300x300.jpg",
+            "large_image": "macushield.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "name": "Medial Infrared Thermometer",
+            "brand": "Varies",
+            "description": "The Medial Infrared Thermometer is a non-contact medical device used to measure body temperature accurately and hygienically. Utilizing infrared technology, it measures temperature by detecting the heat emitted from the forehead or other surfaces without direct skin contact. The thermometer provides fast and reliable results, making it suitable for use in hospitals, clinics, and home settings. With its user-friendly design and digital display, it offers easy operation and clear readings, allowing for quick assessment of fever and monitoring of health conditions. Compact and portable, the infrared thermometer is an essential tool for maintaining health and safety in various environments.",
+            "price": 85,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "macushield-300x300.jpg",
+            "large_image": "macushield.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "name": "Medicare Burn Dressing",
+            "brand": "Medicare",
+            "description": "Medicare Burn Dressing is a sterile wound dressing designed to provide immediate relief and protection for minor burns and scalds. Made from non-adherent, breathable materials, it creates a protective barrier over the wound while allowing for airflow to promote healing. The dressing helps to soothe pain, reduce inflammation, and prevent further damage to the skin, making it ideal for first aid treatment of burn injuries. Individually wrapped for hygiene and convenience, Medicare Burn Dressing is suitable for use at home, in the workplace, or during outdoor activities, providing peace of mind and effective care for minor burns.",
+            "price": 6.95,
+            "size": "10cm x 10cm",
+            "category": 3,
+            "thumbnail": "medicare-burn-dressig-300x300.png",
+            "large_image": "medicare-burn-dressig.png"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "name": "Nivea Men Face Wash",
+            "brand": "Nivea",
+            "description": "Nivea Men Face Wash is a refreshing cleanser specially formulated for men's skin. Enriched with menthol and cleansing microbeads, it effectively removes dirt, oil, and impurities, leaving skin feeling clean and revitalized. The invigorating formula helps to unclog pores, prevent breakouts, and reduce excess oil, promoting a clear and healthy complexion. Suitable for daily use, this face wash is gentle on the skin and does not leave it feeling tight or dry. Start your day with Nivea Men Face Wash for a fresh and energizing skin care routine that keeps you looking and feeling your best.",
+            "price": 3,
+            "size": "None",
+            "category": 6,
+            "thumbnail": "medicare-burn-dressig-300x300.png",
+            "large_image": "medicare-burn-dressig.png"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "name": "Nuage Hayfever Relief Wipes",
+            "brand": "Nuage",
+            "description": "Nuage Hayfever Relief Wipes provide instant relief from hay fever symptoms such as itching, sneezing, and watery eyes. Infused with soothing ingredients like aloe vera and chamomile extract, these wipes calm inflammation and reduce irritation caused by pollen and other allergens. The gentle formula is suitable for sensitive skin and can be used on the face and body for targeted relief. Compact and portable, these convenient wipes are perfect for on-the-go use, allowing you to enjoy the outdoors without the discomfort of hay fever symptoms. Keep Nuage Hayfever Relief Wipes handy during allergy season for quick and effective relief whenever you need it.",
+            "price": 2.99,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "medicare-burn-dressig-300x300.png",
+            "large_image": "medicare-burn-dressig.png"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "name": "Omron M2 Blood Pressure Monitor",
+            "brand": "Omron",
+            "description": "Omron M2 Blood Pressure Monitor is a reliable and easy-to-use device for monitoring blood pressure at home. Featuring IntelliSense technology, it inflates the cuff to the ideal level for accurate readings without discomfort. The large digital display shows systolic, diastolic, and pulse readings, making it easy to track and understand your blood pressure measurements. With its memory function, the monitor stores previous readings for convenient monitoring of blood pressure trends over time. Clinically validated for accuracy and reliability, Omron M2 Blood Pressure Monitor provides peace of mind and empowers users to take control of their cardiovascular health.",
+            "price": 50,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "om-m2-basic_01_1__49082.1591874670-300x300.jpg",
+            "large_image": "om-m2-basic_01_1__49082.1591874670.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "name": "Pharmaton Multivitamin & Mineral Capsules",
+            "brand": "Pharmaton",
+            "description": "Pharmaton Multivitamin & Mineral Capsules are a comprehensive dietary supplement formulated to support overall health and vitality. Packed with essential vitamins, minerals, and ginseng extract, they help to boost energy levels, improve concentration, and enhance physical and mental performance. The unique formula provides antioxidant protection, strengthens the immune system, and supports the body's natural functions, promoting optimal health and well-being. Pharmaton Capsules are suitable for adults of all ages, particularly those leading busy and demanding lifestyles. Incorporate them into your daily routine to maintain vitality and resilience, ensuring you feel your best every day.",
+            "price": 12.04,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "Pharmaton_multivitiamins_7550_03_100_capsules_medipharm_ie_1024x1024@2x-300x300.jpg",
+            "large_image": "Pharmaton_multivitiamins_7550_03_100_capsules_medipharm_ie_1024x1024@2x.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "name": "Prescription Online",
+            "brand": "Phelans Pharmacy",
+            "description": "Prescription Online is a convenient and accessible service that allows individuals to consult with healthcare professionals and obtain prescription medications from the comfort of their own home. Through secure online platforms or telemedicine apps, patients can discuss their medical concerns, receive diagnosis and treatment recommendations, and have prescriptions issued electronically to their preferred pharmacy. This innovative approach to healthcare delivery offers flexibility and convenience, particularly for individuals with busy schedules, mobility limitations, or limited access to traditional medical services. With Prescription Online, patients can access quality healthcare services without the need for in-person appointments, saving time and reducing barriers to receiving essential medical care.",
+            "price": 0,
+            "size": "None",
+            "category": 5,
+            "thumbnail": "prescription-1536x1024.jpg",
+            "large_image": "prescription-300x300.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "name": "Relife Relizema Ultra Hydrating Lotion",
+            "brand": "Relife",
+            "description": "Relife Relizema Ultra Hydrating Lotion is a gentle and nourishing moisturizer specially formulated for dry and sensitive skin. Enriched with natural ingredients such as shea butter, ceramides, and niacinamide, it provides intense hydration and helps to repair the skin's moisture barrier. The lightweight, non-greasy formula absorbs quickly, leaving skin feeling soft, smooth, and replenished. Free from fragrances, parabens, and dyes, this hypoallergenic lotion is suitable for daily use on the face and body, helping to soothe irritation and restore skin's natural balance. Whether used alone or in combination with other skincare products, Relife Relizema Ultra Hydrating Lotion provides long-lasting relief for dry, sensitive skin.",
+            "price": 20,
+            "size": "None",
+            "category": 3,
+            "thumbnail": "relife-relizema-ultra-hydrating-lotion-300x300.jpg",
+            "large_image": "relife-relizema-ultra-hydrating-lotion.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "name": "Rimmel Insta Fix & Matte Powder",
+            "brand": "Rimmel",
+            "description": "Rimmel Insta Fix & Matte Powder is a lightweight setting powder that helps to control shine and mattify the skin for a flawless finish. Formulated with mattifying agents, it absorbs excess oil and minimizes the appearance of pores, leaving skin looking smooth and velvety. The translucent formula is suitable for all skin tones and can be used alone or over makeup to set foundation and prolong wear. With its long-lasting matte effect, Rimmel Insta Fix & Matte Powder keeps makeup looking fresh and shine-free throughout the day, making it a must-have for achieving a polished and matte complexion.",
+            "price": 7.99,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "rimel-match-perfection-concealer-ivory-300x300.jpg",
+            "large_image": "rimel-match-perfection-concealer-ivory-600x754.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "name": "Rimmel Lasting Finish Foundation Classic Beige",
+            "brand": "Rimmel",
+            "description": "Rimmel Lasting Finish Foundation in Classic Beige is a long-wearing liquid foundation that provides full coverage and a natural matte finish. With its lightweight formula and comfortable wear, it conceals imperfections, evens out skin tone, and minimizes the appearance of pores for a flawless complexion that lasts all day. The transfer-resistant formula is sweat-proof and humidity-proof, making it ideal for all-day wear in any climate. Available in a wide range of shades to suit different skin tones, Rimmel Lasting Finish Foundation delivers buildable coverage and a radiant, photo-ready finish that stays put from day to night.",
+            "price": 11.99,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "rimmel-insta-fix-_-matte-300x300.jpg",
+            "large_image": "rimmel-insta-fix-_-matte.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "name": "Rimmel Match Perfection Concealer Ivory",
+            "brand": "Rimmel",
+            "description": "Rimmel Match Perfection Concealer in Ivory is a multi-tasking concealer that brightens, conceals, and corrects imperfections for a flawless complexion. Infused with skin-brightening ingredients, it camouflages dark circles, blemishes, and redness, leaving skin looking radiant and refreshed. The lightweight formula blends seamlessly into the skin, providing buildable coverage and a natural finish that lasts all day. The precision brush applicator allows for targeted application, making it easy to cover specific areas or blend out larger areas for a seamless finish. Whether used alone or with foundation, Rimmel Match Perfection Concealer enhances your natural beauty and boosts your confidence.",
+            "price": 8.99,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "rimmel-insta-fix-_-matte-300x300.jpg",
+            "large_image": "rimmel-insta-fix-_-matte.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "name": "Sally Hansen Airbrush Legs Deep Glow",
+            "brand": "Sally Hansen",
+            "description": "Sally Hansen Airbrush Legs in Deep Glow is a lightweight leg makeup that delivers flawless coverage and a natural-looking tan. With its water-resistant formula and transfer-proof finish, it conceals imperfections, evens out skin tone, and gives legs a smooth, airbrushed appearance. The easy-to-apply spray formula dries quickly and provides long-lasting color that resists fading and streaking. Perfect for special occasions or everyday wear, Sally Hansen Airbrush Legs gives you the confidence to show off your legs with a radiant and sun-kissed glow.",
+            "price": 8.99,
+            "size": "None",
+            "category": 1,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "name": "Sona B Complex",
+            "brand": "Sona",
+            "description": "Sona B Complex is a comprehensive vitamin supplement containing a balanced blend of B vitamins, including B1, B2, B3, B5, B6, B12, biotin, and folic acid. These essential nutrients play a crucial role in energy metabolism, nerve function, and cell health, supporting overall well-being and vitality. Sona B Complex helps to maintain healthy energy levels, reduce fatigue, and support the body's natural stress response. Suitable for daily use, this convenient supplement is ideal for individuals with busy lifestyles, dietary restrictions, or increased nutrient needs. Incorporate Sona B Complex into your daily routine to support optimal health and vitality.",
+            "price": 9.33,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "name": "Sona D1000",
+            "brand": "Sona",
+            "description": "Sona D1000 is a high-strength vitamin D supplement providing 1000 IU (25 mcg) of vitamin D3 per tablet. Formulated with cholecalciferol, the active form of vitamin D, it helps to maintain healthy bones, teeth, and muscles, as well as support immune function and mood balance. Vitamin D is essential for calcium absorption and utilization, making it crucial for bone health and preventing conditions like osteoporosis. Sona D1000 is particularly beneficial for individuals at risk of vitamin D deficiency due to limited sun exposure, age, or dietary factors. Take one tablet daily to ensure you meet your daily vitamin D requirements and support overall health and well-being.",
+            "price": 8.5,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "name": "Sona Infant D-3",
+            "brand": "Sona",
+            "description": "Sona Infant D-3 is a liquid vitamin D supplement specially formulated for infants and young children. Each drop provides 200 IU (5 mcg) of vitamin D3 in a tasteless and odorless solution, making it easy to administer to babies directly or mix with food or drinks. Vitamin D is essential for healthy bone development, immune function, and overall growth and development in infants and children. Sona Infant D-3 helps to ensure your child receives an adequate intake of vitamin D, particularly during times of limited sun exposure or when dietary sources are insufficient. Give your child Sona Infant D-3 daily to support their health and well-being during the crucial early years of life.",
+            "price": 9,
+            "size": "Drops",
+            "category": 7,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "name": "Sona Multiplus",
+            "brand": "Sona",
+            "description": "Sona Multiplus is a comprehensive multivitamin and mineral supplement designed to support overall health and well-being. Formulated with a balanced blend of essential vitamins, minerals, and antioxidants, it helps to fill nutritional gaps and promote optimal health. Sona Multiplus provides key nutrients that are important for energy production, immune function, and cellular health, as well as supporting cardiovascular, brain, and eye health. Suitable for adults of all ages, this convenient daily supplement is ideal for individuals with busy lifestyles, dietary restrictions, or increased nutrient needs. Incorporate Sona Multiplus into your daily routine to support vitality and resilience, ensuring you feel your best every day.",
+            "price": 14,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "name": "Sona Zinc 25mg",
+            "brand": "Sona",
+            "description": "Sona Zinc 25mg is a high-strength zinc supplement providing 25 mg of elemental zinc per tablet. Zinc is an essential mineral that plays a crucial role in immune function, wound healing, and cell growth and division. It also supports healthy skin, hair, and nails, as well as reproductive health and hormone balance. Sona Zinc 25mg helps to maintain optimal zinc levels in the body, particularly during times of increased need or when dietary intake is insufficient. Suitable for adults, this convenient supplement is ideal for individuals looking to support immune function, maintain healthy skin, or address specific health concerns related to zinc deficiency.",
+            "price": 8.6,
+            "size": "60 pack",
+            "category": 7,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "name": "Vichy Homme Aftershave Balm",
+            "brand": "Vichy",
+            "description": "Vichy Homme Aftershave Balm is a soothing and hydrating post-shave treatment for men. Enriched with Vichy Thermal Spa Water and moisturizing agents, it calms irritation, reduces redness, and replenishes moisture to the skin after shaving. The lightweight, non-greasy formula absorbs quickly, leaving skin feeling soft, smooth, and refreshed. With its alcohol-free and hypoallergenic formula, Vichy Homme Aftershave Balm is suitable for all skin types, including sensitive skin. Use it daily to soothe and protect your skin from the discomforts of shaving, ensuring a comfortable and enjoyable grooming experience.",
+            "price": 17.5,
+            "size": "75ml",
+            "category": 4,
+            "thumbnail": "sally-hansen-airbrush-legs-300x300.jpg",
+            "large_image": "sally-hansen-airbrush-legs.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "name": "Vichy Homme Hyde Mag C+ Hydrating Care",
+            "brand": "Vichy",
+            "description": "Vichy Homme Hyde Mag C+ Hydrating Care is a revitalizing moisturizer for men that provides long-lasting hydration and energy to tired and dull-looking skin. Formulated with magnesium and vitamin C glucoside, it boosts skin vitality and radiance, while protecting against environmental stressors and signs of fatigue. The lightweight, non-greasy texture absorbs quickly, leaving skin feeling refreshed and invigorated. Suitable for all skin types, including sensitive skin, this hydrating care is ideal for daily use to maintain healthy, energized skin. Incorporate Vichy Homme Hyde Mag C+ Hydrating Care into your skincare routine for a boost of hydration and vitality, ensuring your skin looks its best every day.",
+            "price": 17.5,
+            "size": "100ml",
+            "category": 4,
+            "thumbnail": "vichy-homme-after-shave-balm-75ml-300x300.png",
+            "large_image": "vichy-homme-after-shave-balm-75ml.png"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "name": "Vitabiotics Pregnacare",
+            "brand": "Vitabiotics",
+            "description": "Vitabiotics Pregnacare is a comprehensive prenatal supplement formulated to support the nutritional needs of pregnant women before, during, and after pregnancy. Packed with essential vitamins, minerals, and omega-3 fatty acids, it helps to promote healthy fetal development, support maternal health, and prepare the body for childbirth and breastfeeding. Vitabiotics Pregnacare provides key nutrients such as folic acid, iron, calcium, and vitamin D, which are crucial for the development of the baby's brain, bones, and immune system. Clinically tested and trusted by healthcare professionals worldwide, it is the UK's number one prenatal supplement brand, offering peace of mind and nutritional support for expecting mothers.",
+            "price": 10.05,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "vichy-homme-hydra-mag-c-50ml-300x300.png",
+            "large_image": "vichy-homme-hydra-mag-c-50ml-300x300.png"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "name": "Ziaja Goats Milk Body Lotion + Free Hand Cream",
+            "brand": "Ziaja",
+            "description": "Ziaja Goats Milk Body Lotion with Free Hand Cream is a nourishing skincare duo enriched with natural goat's milk extract. The body lotion provides intensive hydration and softens dry, rough skin, while the hand cream offers targeted care for dry and cracked hands. Both formulas are enriched with vitamins, minerals, and proteins found in goat's milk, which help to replenish moisture, soothe irritation, and promote healthy skin. Lightweight and fast-absorbing, these skincare products leave skin feeling smooth, supple, and revitalized. Ideal for daily use, they are suitable for all skin types, including sensitive skin. Treat yourself to the luxurious nourishment of Ziaja Goats Milk Body Lotion and Hand Cream for soft, healthy-looking skin from head to toe.",
+            "price": 5.99,
+            "size": "Lotion 400ml",
+            "category": 6,
+            "thumbnail": "vichy-homme-hydra-mag-c-50ml-300x300.png",
+            "large_image": "vichy-homme-hydra-mag-c-50ml-300x300.png"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "name": "Vitabiotics Pregnacare",
+            "brand": "Vitabiotics",
+            "description": "Vitabiotics Pregnacare is a comprehensive prenatal supplement formulated to support the nutritional needs of pregnant women before, during, and after pregnancy. Packed with essential vitamins, minerals, and omega-3 fatty acids, it helps to promote healthy fetal development, support maternal health, and prepare the body for childbirth and breastfeeding. Vitabiotics Pregnacare provides key nutrients such as folic acid, iron, calcium, and vitamin D, which are crucial for the development of the baby's brain, bones, and immune system. Clinically tested and trusted by healthcare professionals worldwide, it is the UK's number one prenatal supplement brand, offering peace of mind and nutritional support for expecting mothers.",
+            "price": 10.05,
+            "size": "30 pack",
+            "category": 7,
+            "thumbnail": "vichy-homme-hydra-mag-c-50ml-300x300.png",
+            "large_image": "vichy-homme-hydra-mag-c-50ml-300x300.png"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "name": "Ziaja Goats Milk Body Lotion + Free Hand Cream",
+            "brand": "Ziaja",
+            "description": "Ziaja Goats Milk Body Lotion with Free Hand Cream is a nourishing skincare duo enriched with natural goat's milk extract. The body lotion provides intensive hydration and softens dry, rough skin, while the hand cream offers targeted care for dry and cracked hands. Both formulas are enriched with vitamins, minerals, and proteins found in goat's milk, which help to replenish moisture, soothe irritation, and promote healthy skin. Lightweight and fast-absorbing, these skincare products leave skin feeling smooth, supple, and revitalized. Ideal for daily use, they are suitable for all skin types, including sensitive skin. Treat yourself to the luxurious nourishment of Ziaja Goats Milk Body Lotion and Hand Cream for soft, healthy-looking skin from head to toe.",
+            "price": 5.99,
+            "size": "Lotion 400ml",
+            "category": 6,
+            "thumbnail": "vichy-homme-hydra-mag-c-50ml-300x300.png",
+            "large_image": "vichy-homme-hydra-mag-c-50ml-300x300.png"
+        }
+    }
+]

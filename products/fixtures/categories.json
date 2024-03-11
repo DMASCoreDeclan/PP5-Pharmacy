@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "cosmetics",
+            "friendly_name": "Cosmetics"
+        }
+    }, 
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "fragrances",
+            "friendly_name": "Fragrances"
+        }
+    }, 
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "healthcare",
+            "friendly_name": "Healthcare"
+        }
+    }, 
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "mens_care",
+            "friendly_name": "Men's Care"
+        }
+    }, 
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "prescription",
+            "friendly_name": "Prescription"
+        }
+    }, 
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "special_offer",
+            "friendly_name": "Special Offer"
+        }
+    }, 
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "vitamins_and_minerals",
+            "friendly_name": "Vitamins & Minerals"
+        }
+    }
+]
