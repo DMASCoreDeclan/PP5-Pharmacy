@@ -93,9 +93,7 @@ body {
     color: #744380;
 }
 
-
 /* -------------Font Awesome */
-
 .fa-shopping-bag,
 .fa-user,
 .fa-label,
@@ -115,7 +113,6 @@ body {
         @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
   }
 }
-  
 
 
 /* --------------------centre footer images */
@@ -160,6 +157,13 @@ body {
     }
 
     .header-container {
-        padding-top: 264px;
+        padding-top: 216px;
+    }
+}
+
+/* pad top navbarwhen collapsed */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 156px;
     }
 }
