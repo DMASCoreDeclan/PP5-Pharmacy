@@ -8,4 +8,6 @@ node_modules/
 .github/
 cloudinary_python.txt
 *.sqlite3
+debug.log   
 *.pyc
+zsettings.py
