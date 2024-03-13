@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import env
+import dj_database_url
 # SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -97,9 +98,9 @@ WSGI_APPLICATION = 'pharmacy.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 if 'DATABSE_URL' in os.environ:
     DATABASES = {
-        'default': {dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else:        
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
