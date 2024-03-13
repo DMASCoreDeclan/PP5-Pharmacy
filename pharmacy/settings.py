@@ -30,6 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu108.gitpod.io',
     '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu110.gitpod.io',
+    'phelans-pharmacy-bf69b3045245.herokuapp.com',
 ]
 
 # Application definition
