@@ -27,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu108.gitpod.io',
@@ -154,3 +155,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Loggong capability
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+}
