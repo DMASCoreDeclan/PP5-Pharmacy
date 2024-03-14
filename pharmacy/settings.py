@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import env
+if os.path.isfile('env.py'):
+    import env
 import dj_database_url
 # SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
