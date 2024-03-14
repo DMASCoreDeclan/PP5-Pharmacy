@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/pp_homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('{{media}}pp_homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 264px);
     color: #744380;
