@@ -33,11 +33,11 @@
                         <div class="card h-100 border-0">
                             {% if product.thumbnail %}
                                 <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                    <img src="/media/{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                    <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                                 </a>
                             {% else %}
                                 <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                    <img src="/media/noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                    <img src="{{ MEDIA_URL}}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
                                 </a>
                             {% endif %}
                             <div class="card-body pb-0">
