@@ -9,6 +9,8 @@
 </div>
 {% endblock page_header %}
 
+<title>{% block extra_title %} {{ product.name }} {% endblock extra_title %}</title>
+
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
