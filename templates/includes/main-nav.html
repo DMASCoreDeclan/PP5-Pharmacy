@@ -8,10 +8,21 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'all_products' %}" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
+                Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-                <a href="{% url 'all_products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'all_products' %}?sort=price&direction=asc" class="dropdown-item">By Price </a>
+                <a href="{% url 'all_products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating </a>
+                <a href="{% url 'all_products' %}?sort=category&direction=asc" class="dropdown-item">By Category </a>
+                <a href="{% url 'all_products' %}" class="dropdown-item">All Products </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'all_products' %}" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="shop-link">
                 <a href="{% url 'all_products' %}?category=special_offer" class="dropdown-item">Special Offer </a>
                 <a href="{% url 'all_products' %}?category=cosmetics,fragrances" class="dropdown-item">Fragrances &amp; Cosmetics </a>
                 <a href="{% url 'all_products' %}?category=healthcare" class="dropdown-item">Healthcare </a>
