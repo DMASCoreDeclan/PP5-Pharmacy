@@ -149,8 +149,9 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background-color: #212529 !important;
-    color: rgba(0, 0, 0, .7);
+    background-color: #fff !important;
+    /* color: rgba(0, 0, 0, .7); */
+    color: #744380 !important;
 }
 
 /* -------------------------------- Media Queries */
