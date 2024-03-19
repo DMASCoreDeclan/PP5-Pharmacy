@@ -38,9 +38,10 @@ body {
     color: white;
 }
 
-.btn-purple {
-    background: #744380;
-    color: white;
+.btn-outline-purple {
+    background: white;
+    color: #744380 !important;
+    border: 1px solid #744380;
 }
 
 .shop-now-button:hover,
@@ -167,7 +168,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-.border-black {
+.border-purple {
     border: 1px solid #744380 !important;
 }
 
