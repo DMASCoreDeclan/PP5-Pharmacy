@@ -30,17 +30,17 @@
                         <table class="table table-sm table-borderless">
                             <tr>
                                 <thead class="text-purple">
-                                    <th class="col">Product Info</th>
-                                    <th class="col"></th>
-                                    <th class="col">Price</th>
-                                    <th class="col">Quantity</th>
-                                    <th class="col">Subtotal</th>
+                                    <th class="col-4">Product Info</th>
+                                    <th class="col-2"></th>
+                                    <th class="col-1">Price</th>
+                                    <th class="col-2">Quantity</th>
+                                    <th class="col-1">Subtotal</th>
                                 </thead>
                             </tr>
                         
                             {% for item in cart_items %}
                                 <tr>
-                                    <td class="p-3">
+                                    <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ item.product.thumbnail }}">
                                     </td>
                                     <td class="py-3">
@@ -120,6 +120,5 @@
 {% endblock footer %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-{% endblock %}
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+{% endblock postloadjs %}
