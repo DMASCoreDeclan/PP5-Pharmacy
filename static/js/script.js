@@ -69,3 +69,22 @@ $('.decrement-qty').click(function(e) {
 });
 
 
+// On click Update items from cartview.html
+$('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form')
+    form.submit();
+})
+
+// On click Remove items from cartview.html
+// https://youtu.be/0rRNZa7BR_Y 08:59
+$('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId =$(this).attr('id').split('remove_')[1];
+    var url = '/cartview/remove/${itemId}';
+    var data = {'csrfmiddlewaretoken': csrfToken,}
+
+    $post(url, data).done(function() {
+        location.reload();
+    });
+    
+})
