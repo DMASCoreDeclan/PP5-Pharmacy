@@ -45,7 +45,7 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0"><strong>{% if item.product.has_sizes %}Size: {{ item.product.size }} {% endif %}</strong></p>
+                                        <p class="my-0"><strong>{% if item.product.has_sizes %}Size: {{ item.product.size }} {% else %} Size: Not Applicable {% endif %}</strong></p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.product.price }}</p>
