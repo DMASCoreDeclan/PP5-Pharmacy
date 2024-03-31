@@ -194,7 +194,11 @@
 
 
 {% block postloadjs %}
-{% endblock %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+{% endblock postloadjs %}
 
 
 {% block footer %}
