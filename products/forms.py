@@ -1,11 +1,11 @@
 from django import forms
-from .models import Produt, Category
+from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
 
     class Meta:
-        model = ProductForm
+        model = Product
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):
