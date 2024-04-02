@@ -38,12 +38,15 @@
                                     <th class="col-2">Quantity</th>
                                     <th class="col-1">Subtotal</th>
                                 </thead>
-                            </tr>
-                        
+                            </tr>                        
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}{{ item.product.thumbnail }}">
+                                        {% if product.thumbnail %}
+                                            <img src="{{ MEDIA_URL}}{{ product.thumbnail }}" alt="{{ product.name }}" class="img-fluid rounded">
+                                        {% else %}
+                                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid rounded">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
