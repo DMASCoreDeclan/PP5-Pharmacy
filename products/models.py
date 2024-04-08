@@ -41,6 +41,8 @@ class Product(models.Model):
         except:
             return []
 
+
+
 """
 This model allows the Administrator to take two or more
 products and put them together as a SPECIAL when bought
@@ -50,4 +52,8 @@ class ProductBundle(Product):
     product_list = models.ManyToManyField(
         'Product', related_name='product_list'
         )
+
+    class Meta:
+        verbose_name_plural = 'Product Bundles'
+    
     
