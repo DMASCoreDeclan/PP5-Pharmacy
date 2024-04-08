@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Category(models.Model):
@@ -31,3 +32,16 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def get_product_list(self):
+        try:
+            product_bundle = ProductBundle.objects.get(name=self.name)
+            return product_bundle.product_list.all()
+        except:
+            return []
+
+
+class ProductBundle(Product):
+    product_list = models.ManyToManyField('Product', related_name='product_list')
+    
