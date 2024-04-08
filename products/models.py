@@ -41,7 +41,13 @@ class Product(models.Model):
         except:
             return []
 
-
+"""
+This model allows the Administrator to take two or more
+products and put them together as a SPECIAL when bought
+together
+"""
 class ProductBundle(Product):
-    product_list = models.ManyToManyField('Product', related_name='product_list')
+    product_list = models.ManyToManyField(
+        'Product', related_name='product_list'
+        )
     
