@@ -57,13 +57,37 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
                             {% if product.thumbnail %}
-                                <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                    <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ MEDIA_URL}}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                                 </a>
                             {% else %}
-                                <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                </a>
+                                {% if not product.get_product_list %}
+                                    {% if product.thumbnail %}
+                                        <a href="{% url 'product_detail' product.id %}" target="_blank">
+                                        <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                        </a>
+                                    {% else %}	
+                                        <a href="{% url 'product_detail' product.id %}" target="_blank">
+                                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                        </a>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="row">
+                                        {% for product_item in product.get_product_list %}
+                                            <div class="col-4">
+                                                {% if product_item.thumbnail %}
+                                                    <a href="{% url 'product_detail' product.id %}" target="_blank">
+                                                        <img src="{{ MEDIA_URL}}{{ product_item.thumbnail }}" alt="{{ product_item.name }}" class="card-img-top img-fluid">
+                                                    </a>
+                                                {% else %}
+                                                    <a href="{% url 'product_detail' product.id %}" target="_blank">
+                                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product_item.name }}" class="card-img-top img-fluid">
+                                                    </a>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
                             {% endif %}
                             <div class="card-body pb-0">
                                 <p class="mb-0">{{ product.name }}</p>
