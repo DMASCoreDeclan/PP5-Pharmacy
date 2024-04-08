@@ -20,8 +20,8 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            {% if product.thumbnail %}
-                                <img src="{{ MEDIA_URL}}{{ product.thumbnail }}" alt="{{ product.name }}" class="w-100">
+                            {% if item.product.thumbnail %}
+                                <img src="{{ MEDIA_URL}}{{ item.product.thumbnail }}" alt="{{ product.name }}" class="w-100">
                             {% else %}
                                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="w-100">
                             {% endif %}

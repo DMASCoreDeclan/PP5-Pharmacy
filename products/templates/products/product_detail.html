@@ -17,33 +17,7 @@
         <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                     <div class="image-container my-5">
-                        {% if product.thumbnail %}
-                            <a href="">
-                                <img src="{{ MEDIA_URL}}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-                            </a>
-                        {% else %}
-                            {%if not product.get_product_list%}
-                                <a href="">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                </a>
-                            {%else%}
-                                <div class="row">
-                                    {% for product_item in product.get_product_list %}
-                                        <div class="col-4">
-                                            {% if product_item.thumbnail %}
-                                                <a href="">
-                                                    <img src="{{ MEDIA_URL}}{{ product_item.thumbnail }}" alt="{{ product_item.name }}" class="card-img-top img-fluid">
-                                                </a>
-                                            {% else %}
-                                                <a href="">
-                                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product_item.name }}" class="card-img-top img-fluid">
-                                                </a>
-                                            {% endif %}
-                                        </div>
-                                    {%endfor%}
-                                </div>
-                                {% endif %}
-                        {% endif %}
+                        {% include 'includes/product_bundle_picture.html' %}
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 ">
