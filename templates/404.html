@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <!-- <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div> -->
+{% endblock %}
+
+{% block content %}
+    <!-- <div class="overlay"></div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr class="logo-font mt-5 mb-5">
+                <h2 class="logo-font mt-5 mb-5">Ooops, something went wrong, a 404 Error occured</h2>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+            </div>
+        </div>
+        
+{% endblock %}
+
+
+{% block footer %}
+    <!-- {% include 'includes/white-footer.html' %} -->
+{% endblock footer %}
+
+{% block postloadjs %}
+{% endblock postloadjs %}
