@@ -33,7 +33,6 @@ class CommunicationContentAdmin(SummernoteModelAdmin):
         'slug', 
         'created_on', 
         'updated_on', 
-        # 'content', 
         'image', 
     )
 
