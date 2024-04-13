@@ -8,6 +8,7 @@ django-allauth==0.53.1
 django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-storages==1.14.2
+django-summernote==0.8.20.0
 emmett==2.5.9
 emmett-crypto==0.5.1
 granian==1.0.2
