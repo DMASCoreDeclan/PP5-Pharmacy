@@ -224,6 +224,25 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
+# Summernote Default settings:
+# https://github.com/summernote/summernote/blob/c223b08a20c1d8cbe20fb5ba213d617b83c4999f/src/js/base/settings.js#L152
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'fontSizes': ['8', '9', '10', '11', '12', '14', '16', '18', '24', '36'],
+        'fontNames': ['Lato', ],
+        'fontNamesIgnoreCheck': ['Spectral', 'Quicksand'],
+        'colors': [
+      ['#FFFFFF', '#744380', ],
+    ],
+
+    'colorsName': [
+      ['PhelansWhite', 'PhelansPurple', ],
+    ],
+    },
+}
+
+
+
 # Loggong capability
 # https://docs.djangoproject.com/en/5.0/topics/logging/#s-configuring-logging
 LOGGING = {
