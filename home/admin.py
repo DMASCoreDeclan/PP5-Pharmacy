@@ -28,12 +28,12 @@ class CommunicationContentAdmin(SummernoteModelAdmin):
     list_display = (
         'status', 
         'author',
-        'content_type',  
+        'short_description',  
         'title', 
         'slug', 
         'created_on', 
         'updated_on', 
-        'content', 
+        # 'content', 
         'image', 
     )
 

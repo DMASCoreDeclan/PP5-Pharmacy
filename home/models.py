@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import truncatewords
 from django.contrib.auth.models import User
 
 """
@@ -14,7 +15,6 @@ class CommunicationStatus(models.Model):
 
     def __str__(self):
         return self.status
-
 
 
 """
@@ -46,13 +46,17 @@ class CommunicationContent(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    image = models.ImageField(default='default.jpg', upload_to=u'uploads/')
+    image = models.ImageField(default='phelans-logo-high-cropped.png', upload_to=u'uploads/')
     status = models.ForeignKey(CommunicationStatus, on_delete=models.SET_DEFAULT, default=1)
     content_type = models.ForeignKey(CommunicationType, on_delete=models.SET_DEFAULT, default=2)
 
     class Meta:
         verbose_name_plural = 'Communication Content'
         ordering = ['-created_on']
+
+    @property
+    def short_description(self):
+        return truncatewords(self.content, 25)
 
     def __str__(self):
         return self.title
