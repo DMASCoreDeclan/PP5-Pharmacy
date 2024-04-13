@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import CommunicationType, CommunicationStatus, CommunicationContent
+from django_summernote.admin import SummernoteModelAdmin
 
-
+@admin.register(CommunicationStatus)
 class StatusAdmin(admin.ModelAdmin):
     list_display = (
         'id',
@@ -11,6 +12,7 @@ class StatusAdmin(admin.ModelAdmin):
     ordering = ('id',)
 
 
+@admin.register(CommunicationType)
 class CommunicationTypeAdmin(admin.ModelAdmin):
     list_display = (
         'id',
@@ -21,7 +23,8 @@ class CommunicationTypeAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
-class CommunicationContentAdmin(admin.ModelAdmin):
+@admin.register(CommunicationContent)
+class CommunicationContentAdmin(SummernoteModelAdmin):
     list_display = (
         'status', 
         'author',
@@ -35,20 +38,15 @@ class CommunicationContentAdmin(admin.ModelAdmin):
     )
 
     fields = (
-        'content_type', 
         'status', 
-        'author', 
+        'author',
+        'content_type',  
         'title', 
         'slug', 
         'content', 
         'image', 
     )
-
-    ordering = ('-created_on',)
-
-
-# Register your models here.
-admin.site.register(CommunicationStatus, StatusAdmin)
-admin.site.register(CommunicationType, CommunicationTypeAdmin)
-admin.site.register(CommunicationContent, CommunicationContentAdmin)
-
+    list_filter = ("content_type",)
+    search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
+    summernote_fields = ('content',)
