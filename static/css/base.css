@@ -250,6 +250,17 @@ input[name='q']::placeholder {
 }
 
 
+/* ----------------------------Helathcare Aricles */
+.web-card-img {
+    position: relative; 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+    margin-left: auto;  
+    margin-right: auto;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
