@@ -1,4 +1,6 @@
 from django.db import models
+
+# Used to abbreviate content in admin panel
 from django.template.defaultfilters import truncatewords
 from django.contrib.auth.models import User
 
@@ -54,8 +56,13 @@ class CommunicationContent(models.Model):
         verbose_name_plural = 'Communication Content'
         ordering = ['-created_on']
 
+
     @property
     def short_description(self):
+        """
+        The article is too long in /admin.  This function
+        abbreviates the article so only the first 25 words show
+        """
         return truncatewords(self.content, 25)
 
     def __str__(self):
