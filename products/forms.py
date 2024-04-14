@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, ProductBundle
 from .widgets import CustomClearableFileInput
 
 
