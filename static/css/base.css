@@ -102,30 +102,19 @@ body {
     color: #744380;
 }
 
-/* -------------change card for white background and purple foreground */
-/* .card-header-purple {
-    padding: $card-spacer-y $card-spacer-x;
-    margin-bottom: 0; /* Removes the default margin-bottom of <hN>
-    color: $card-cap-color;
-    background-color: $card-cap-bg;
-    border-bottom: $card-border-width solid $card-border-color;
+. card-header-white {
+    color: #fff !important;
+}
 
-    &:first-child {
-        @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
-  }
-} */
+/* --------------------remove underline footer */
+.a-remove:hover {
+    text-decoration: none;
+}
 
-/* .card-header {
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  }
-  
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-  } */
-
+.fa-center { 
+    text-align: center; 
+    width: 100%; 
+}
 
 /* --------------------centre footer images */
 .footer-card {
@@ -135,6 +124,11 @@ body {
 }
 
 .footer-card-purple {
+    max-height: 180px;
+    max-width: 180px;
+}
+
+.footer-card-white {
     max-height: 180px;
     max-width: 180px;
 }
@@ -188,9 +182,6 @@ input[name='q']::placeholder {
 
 .custom-toast {
     overflow: visible;
-    /* Error Message not appearing on "Empty Search" 
-    appears when opacity is 1, but then can't be closed*/
-    /* opacity: 1; */
 }
 
 .toast-capper {
@@ -250,13 +241,10 @@ input[name='q']::placeholder {
 }
 
 
-/* ----------------------------Helathcare Aricles */
+/* ----------------------------Healthcare Aricles */
 .web-card-img {
-    position: relative; 
-    width: 200px; 
-    height: 200px; 
-    overflow: hidden; 
-    border-radius: 50%; 
+    width: 64px; 
+    height: 64px; 
     margin-left: auto;  
     margin-right: auto;
 }
