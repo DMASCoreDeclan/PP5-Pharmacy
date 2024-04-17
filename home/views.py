@@ -10,6 +10,10 @@ def index(request):
     return render(request, 'home/index.html')
 
 
+def subscribe(request):
+    return render(request, 'home/subscribe.html')
+
+
 def healthcare_advice(request):
     """
     View to display PUBLISHED articles that are of type WEBSITE_ARTICLE
@@ -25,13 +29,6 @@ def healthcare_advice(request):
 
     return render(request, template, context)
 
-
-# class NewsletterContent(generic.ListView):
-#     """
-#     View to email PUBLISHED articles that are of type NEWSLETTER
-#     """
-#     model = CommunicationContent
-#     queryset = CommunicationContent.objects.filter(status=2, content_type=1)
 
 @user_passes_test(lambda u: u.is_superuser)
 # https://stackoverflow.com/questions/12003736/django-login-required-decorator-for-a-superuser
