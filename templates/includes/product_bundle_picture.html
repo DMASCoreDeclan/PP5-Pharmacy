@@ -2,11 +2,11 @@
 
     {% if product.thumbnail %}
         <a href="{% url 'product_detail' product.id %}" target="_blank">
-            <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+            <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="An image showing {{ product.name }}" class="card-img-top img-fluid">
         </a>
     {% else %}
         <a href="{% url 'product_detail' product.id %}" target="_blank">
-            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+            <img src="{{ MEDIA_URL }}noimage.png" alt="There is no image for {{ product.name }}." class="card-img-top img-fluid">
         </a>
     {% endif %}
 {% else %}
@@ -15,11 +15,11 @@
             <div class="col-4">
                 {% if product_item.thumbnail %}
                     <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ MEDIA_URL}}{{ product_item.thumbnail }}" alt="{{ product_item.name }}" class="card-img-top img-fluid">
+                        <img src="{{ MEDIA_URL}}{{ product_item.thumbnail }}" alt="An image showing {{ product_item.name }}" class="card-img-top img-fluid">
                     </a>
                 {% else %}
                     <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product_item.name }}" class="card-img-top img-fluid">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="There is no image for {{ product_item.name }}" class="card-img-top img-fluid">
                     </a>
                 {% endif %}
             </div>
