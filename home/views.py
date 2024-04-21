@@ -11,8 +11,8 @@ def index(request):
     return render(request, 'home/index.html')
 
 
-# def subscribe(request):
-#     return render(request, 'home/subscribe.html')
+def subscribe(request):
+    return render(request, 'home/subscribe.html')
 
 
 def healthcare_advice(request):
