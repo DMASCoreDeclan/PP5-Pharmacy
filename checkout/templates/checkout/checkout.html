@@ -111,14 +111,14 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
+                    <div aria-label="adjust bag" class="submit-button text-right mt-5 mb-2">                    
 						<a href="{% url 'cartview' %}" class="btn btn-outline-purple rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="btn btn-purple rounded-0">
+						<button aria-label="complete order" id="submit-button" class="btn btn-purple rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
@@ -128,7 +128,7 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+							<span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
 						</p>
 					</div>
                 </form>

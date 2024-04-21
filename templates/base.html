@@ -9,9 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Google Verification Meta Tag -->
         <meta name="google-site-verification" content="dsR6d8JeRjQw31RnKBChZD3uBrrjnA4UU7gJyDy_syw" />
-        <meta name="content" description="Call In or Shop Online, Phelans Pharmacy 33 Michael Street Waterford City Ireland, The friendliest pharmacy in Waterford, seving Customers for 100 years">
-        <meta name="content" keywords="I need some medical advice in Waterford, Elegant Gifts for Ladies in Waterford, Blister Packing Service in Waterford, Pharmacies in Waterford in Waterford, Elegant Gifts for Women in Waterford, I need medical advice in Waterford, Professional/Personal in Waterford, Prescription Delivery in Waterford, Late Night Pharmacy in Waterford, Nearest pharmacy in Waterford, Anniversary gift in Waterford, Prescription in Waterford, Good service in Waterford, Drug Store in Waterford, Responsive in Waterford, Dressings in Waterford, Mens Care in Waterford, Deodorant in Waterford, Afteshave in Waterford, Skin Care in Waterford, Pharmacy in Waterford, Plasters in Waterford, Reliable in Waterford, Perfume in Waterford, Patient in Waterford, Razors in Waterford, Online in Waterford, Fast in Waterford, MPSI in Waterford, Care in Waterford, Gift Pack for wife in Waterford, Buy gift for husband in Waterford, Birthday gift wife in Waterford, Gift Pack for husband in Waterford, Buy gift for husband in Waterford, Birthday gift wife /girlfriend in Waterford, Gift Pack for partner in Waterford, Buy gift for partner in Waterford, Birthday gift girlfriend in Waterford, Vitamins, Minerals, Special Offers, Fragrances, Multipack, Mens Care, Healthcare, Cosmetics, Prescriptions">
         {% block meta %}
+        <meta name="description" content="Call In or Shop Online, Phelans Pharmacy 33 Michael Street Waterford City Ireland, The friendliest pharmacy in Waterford, seving Customers for 100 years">
+        <meta name="keywords" content="I need some medical advice in Waterford, Elegant Gifts for Ladies in Waterford, Blister Packing Service in Waterford, Pharmacies in Waterford in Waterford, Elegant Gifts for Women in Waterford, I need medical advice in Waterford, Professional/Personal in Waterford, Prescription Delivery in Waterford, Late Night Pharmacy in Waterford, Nearest pharmacy in Waterford, Anniversary gift in Waterford, Prescription in Waterford, Good service in Waterford, Drug Store in Waterford, Responsive in Waterford, Dressings in Waterford, Mens Care in Waterford, Deodorant in Waterford, Afteshave in Waterford, Skin Care in Waterford, Pharmacy in Waterford, Plasters in Waterford, Reliable in Waterford, Perfume in Waterford, Patient in Waterford, Razors in Waterford, Online in Waterford, Fast in Waterford, MPSI in Waterford, Care in Waterford, Gift Pack for wife in Waterford, Buy gift for husband in Waterford, Birthday gift wife in Waterford, Gift Pack for husband in Waterford, Buy gift for husband in Waterford, Birthday gift wife /girlfriend in Waterford, Gift Pack for partner in Waterford, Buy gift for partner in Waterford, Birthday gift girlfriend in Waterford, Vitamins, Minerals, Special Offers, Fragrances, Multipack, Mens Care, Healthcare, Cosmetics, Prescriptions">
         {% endblock meta %}
 
         {% block extra_meta %}
@@ -63,7 +63,7 @@
                         <div class="input-group w-100">
                             <input class="form-control border border-purple rounded-0" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
-                                <button type="submit" class="form-control btn btn-purple border border-purple rounded-0">
+                                <button aria-label="search" type="submit" class="form-control btn btn-purple border border-purple rounded-0">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -76,21 +76,21 @@
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             {% if request.user.is_authenticated %}
-                                <a class="text-purple nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="text-purple nav-link" href="#" id="base-user-optionss" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="text-center">
                                         <div><i class="fas fa-user fa-lg"></i></div>
                                         <p class="my-0 fa-label">{{ request.user.username }}s Account</p>
                                     </div>
                                 </a>
                             {% else %}
-                                <a class="text-purple nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="text-purple nav-link" href="#" id="base-user-optionss" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="text-center">
                                         <div><i class="fas fa-user fa-lg"></i></div>
                                         <p class="my-0 fa-label">My Account</p>
                                     </div>
                                 </a>
                             {% endif %}
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="base-user-optionss">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -122,7 +122,7 @@
             </div>
             <div class="row bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
