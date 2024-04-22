@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.template.defaultfilters import slugify
 
-from .models import CommunicationContent
+from .models import CommunicationContent, CommunicationType, CommunicationStatus
 from .forms import CommunicationForm
 
 # Create your views here.
@@ -34,14 +36,40 @@ def healthcare_advice(request):
     return render(request, template, context)
 
 
-@user_passes_test(lambda u: u.is_superuser)
+@login_required
+# @user_passes_test(lambda u: u.is_superuser)
 # https://stackoverflow.com/questions/12003736/django-login-required-decorator-for-a-superuser
-def add_web_article(request):
+def add_article(request):
     """
     View to add articles that are of type WEBSITE_ARTICLE
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only Store Owners can do that')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = CommunicationForm(request.POST, request.FILES)
+        type = CommunicationType.objects.filter(name='website_article')
+        status = CommunicationStatus.objects.filter(id=2)
+        if form.is_valid:
+            article = form.save(commit=False)
+            article.slug = slugify(article.title)
+            article.author = request.user
+            article.save()
+            messages.success(
+                request, 
+                f'{request.user}, you\'ve aded a new article!'
+                )
+            return redirect(reverse('healthcare_advice'))
+    else:
+        form = CommunicationForm()
+
+
+
+
+
     form = CommunicationForm()
-    template = 'home/article_add.html'
+    template = 'home/add_article.html'
     context = {
         'form': form,
     }

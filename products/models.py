@@ -43,12 +43,13 @@ class Product(models.Model):
 
 
 
-"""
-This model allows the Administrator to take two or more
-products and put them together as a SPECIAL when bought
-together
-"""
+
 class ProductBundle(Product):
+    """
+    This model allows the Administrator to take two or more
+    products and put them together as a SPECIAL when bought
+    together
+    """
     product_list = models.ManyToManyField(
         'Product', related_name='product_list'
         )
