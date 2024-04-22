@@ -12,6 +12,9 @@ def index(request):
 
 
 def subscribe(request):
+    '''
+    <!-- render code for mailchimp.com newsletter -->
+    '''
     return render(request, 'home/subscribe.html')
 
 
@@ -31,7 +34,7 @@ def healthcare_advice(request):
     return render(request, template, context)
 
 
-# @user_passes_test(lambda u: u.is_superuser)
+@user_passes_test(lambda u: u.is_superuser)
 # https://stackoverflow.com/questions/12003736/django-login-required-decorator-for-a-superuser
 def add_web_article(request):
     """
