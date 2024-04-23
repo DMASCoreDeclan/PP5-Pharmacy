@@ -41,7 +41,7 @@ def add_article(request):
     """
     View to add articles that are of type WEBSITE_ARTICLE
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Only Store Owners can do that')
         return redirect(reverse('home'))
 

@@ -81,7 +81,7 @@ def add_product(request):
     """
     Add a product to the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Only Store Owners can do that')
         return redirect(reverse('home'))
 
@@ -109,7 +109,7 @@ def edit_product(request, product_id):
     """
     Edit a product in the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Only Store Owners can do that')
         return redirect(reverse('home'))
 
@@ -140,7 +140,7 @@ def delete_product(request, product_id):
     """
     Delete a product in the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Only Store Owners can do that')
         return redirect(reverse('home'))
 
