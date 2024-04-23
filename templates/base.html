@@ -10,8 +10,8 @@
         <!-- Google Verification Meta Tag -->
         <meta name="google-site-verification" content="dsR6d8JeRjQw31RnKBChZD3uBrrjnA4UU7gJyDy_syw" />
         {% block meta %}
-        <meta name="description" content="Call In or Shop Online, Phelans Pharmacy 33 Michael Street Waterford City Ireland, The friendliest pharmacy in Waterford, seving Customers for 100 years">
-        <meta name="keywords" content="I need some medical advice in Waterford, Elegant Gifts for Ladies in Waterford, Blister Packing Service in Waterford, Pharmacies in Waterford in Waterford, Elegant Gifts for Women in Waterford, I need medical advice in Waterford, Professional/Personal in Waterford, Prescription Delivery in Waterford, Late Night Pharmacy in Waterford, Nearest pharmacy in Waterford, Anniversary gift in Waterford, Prescription in Waterford, Good service in Waterford, Drug Store in Waterford, Responsive in Waterford, Dressings in Waterford, Mens Care in Waterford, Deodorant in Waterford, Afteshave in Waterford, Skin Care in Waterford, Pharmacy in Waterford, Plasters in Waterford, Reliable in Waterford, Perfume in Waterford, Patient in Waterford, Razors in Waterford, Online in Waterford, Fast in Waterford, MPSI in Waterford, Care in Waterford, Gift Pack for wife in Waterford, Buy gift for husband in Waterford, Birthday gift wife in Waterford, Gift Pack for husband in Waterford, Buy gift for husband in Waterford, Birthday gift wife /girlfriend in Waterford, Gift Pack for partner in Waterford, Buy gift for partner in Waterford, Birthday gift girlfriend in Waterford, Vitamins, Minerals, Special Offers, Fragrances, Multipack, Mens Care, Healthcare, Cosmetics, Prescriptions">
+            <meta name="description" content="Call In or Shop Online, Phelans Pharmacy 33 Michael Street Waterford City Ireland, The friendliest pharmacy in Waterford, seving Customers for 100 years">
+            <meta name="keywords" content="I need some medical advice in Waterford, Elegant Gifts for Ladies in Waterford, Blister Packing Service in Waterford, Pharmacies in Waterford in Waterford, Elegant Gifts for Women in Waterford, I need medical advice in Waterford, Professional/Personal in Waterford, Prescription Delivery in Waterford, Late Night Pharmacy in Waterford, Nearest pharmacy in Waterford, Anniversary gift in Waterford, Prescription in Waterford, Good service in Waterford, Drug Store in Waterford, Responsive in Waterford, Dressings in Waterford, Mens Care in Waterford, Deodorant in Waterford, Afteshave in Waterford, Skin Care in Waterford, Pharmacy in Waterford, Plasters in Waterford, Reliable in Waterford, Perfume in Waterford, Patient in Waterford, Razors in Waterford, Online in Waterford, Fast in Waterford, MPSI in Waterford, Care in Waterford, Gift Pack for wife in Waterford, Buy gift for husband in Waterford, Birthday gift wife in Waterford, Gift Pack for husband in Waterford, Buy gift for husband in Waterford, Birthday gift wife /girlfriend in Waterford, Gift Pack for partner in Waterford, Buy gift for partner in Waterford, Birthday gift girlfriend in Waterford, Vitamins, Minerals, Special Offers, Fragrances, Multipack, Mens Care, Healthcare, Cosmetics, Prescriptions">
         {% endblock meta %}
 
         {% block extra_meta %}
@@ -129,11 +129,13 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-purple text-white d-sm-block">
-                    <h4 class="logo-font my-1">Free Delivery  on orders over €{{ free_delivery_threshold }}!</h4>
+            {% if not user.is_staff %}
+                <div id="delivery-banner" class="row text-center">
+                    <div class="col bg-purple text-white d-sm-block">
+                        <h4 class="logo-font my-1">Free Delivery  on orders over €{{ free_delivery_threshold }}!</h4>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </header>
         
         {% if messages %}
@@ -160,8 +162,10 @@
         {% block content %}
         {% endblock content %}
 
-        {% block footer %}
-        {% endblock footer %}
+        {% if not user.is_staff %}
+            {% block footer %}
+            {% endblock footer %}
+        {% endif %}
         
         {% block postloadjs %}
         <script type="text/javascript">
