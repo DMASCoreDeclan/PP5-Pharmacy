@@ -1,13 +1,13 @@
 from django import forms
 from .models import CommunicationContent, CommunicationType, CommunicationStatus
-from products.widgets import CustomClearableFileInput
+from .widgets import CustomClearableFileInput
 
 class CommunicationForm(forms.ModelForm):
 
     class Meta: 
         model = CommunicationContent
-        # fields = '__all__'
-        fields = ['status', 'title', 'content_type', 'content']
+        fields = '__all__'
+        exclude = ['slug', 'author', 'content_type']
 
     image = forms.ImageField(label='Article Image', required=False, widget=CustomClearableFileInput)
    

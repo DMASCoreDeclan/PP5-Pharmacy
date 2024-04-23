@@ -37,8 +37,6 @@ def healthcare_advice(request):
 
 
 @login_required
-# @user_passes_test(lambda u: u.is_superuser)
-# https://stackoverflow.com/questions/12003736/django-login-required-decorator-for-a-superuser
 def add_article(request):
     """
     View to add articles that are of type WEBSITE_ARTICLE
