@@ -22,22 +22,37 @@
             </div>
             <div class="row">
                 {% for article in webarticles %}
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card h-100 border-0 mx-2">
-                        <div class="card-body pb-0">
-                            <h5 class="text-center mb-0">{{ article.title }}</h5>
-                        </div>
+                    {% if user.is_staff %}
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                        <div class="card h-100 border-0 mx-2">
+                            <div class="card-body pb-0">
+                                <h5 class="text-center mb-0">{{ article.title }} ({{ article.status }} by {{ article.author }} )</h5>
+                            </div>
+                    {% else %}
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                        <div class="card h-100 border-0 mx-2">
+                            <div class="card-body pb-0">
+                                <h5 class="text-center mb-0">{{ article.title }}</h5>
+                            </div>
+                    {% endif %}
                         <img src="{{MEDIA_URL}}{{ article.image }}" class="card-img-top rounded-circle col-offset-2 web-card-img"
                             alt="{{ article.title }} image">
                         <div class="card-body pb-0">
                             {% if article.content|safe|wordcount > 50 %}
                                 <p class="card-text">{{ article.content|safe|truncatewords_html:50 }}</p>
-                                <!-- Button trigger modal -->
-                                <button aria-label="read more" type="button" class="btn btn-primary btn-purple" data-toggle="modal"
-                                    data-target="#{{ article.slug }}">
-                                    Read More &rarr;
-                                </button>
-                                <!-- Modal -->
+                                {% if user.is_staff %}
+                                    <!-- Edit and Delete Button if user is_staff -->
+                                        <button class="btn btn-sm btn-delete-post ms-1" article_id="{{ article.id }}" article_slug="{{ article.slug }}">Delete</button>
+                                        <a href="{% url 'edit_article' article.slug article.pk %}" class="btn-sm btn btn-edit ms-1" article_id="{{ article.id }}">Edit</a>
+                                        </p>
+                                {% else %}
+                                    <!-- Button trigger modal -->
+                                    <button aria-label="read more" type="button" class="btn btn-primary btn-purple" data-toggle="modal"
+                                        data-target="#{{ article.slug }}">
+                                        Read More &rarr;
+                                    </button>
+                                    <!-- Modal -->
+                                {% endif %}
                                 <div class="modal fade" id="{{ article.slug }}" tabindex="-1" role="dialog"
                                     aria-labelledby="{{ article.slug }}Title" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
