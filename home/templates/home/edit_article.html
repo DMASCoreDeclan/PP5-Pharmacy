@@ -9,6 +9,8 @@
     </div>
 {% endblock %}
 
+<title>{% block extra_title %} Edit Healthcare Articles {% endblock extra_title %}</title>
+
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
@@ -16,7 +18,7 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Article Management</h2>
-                <h5 class="text-muted" >Edit an Article</h5>
+                <h5 class="text-muted" >Edit Article {{ article.title }}</h5>
                 <hr>
             </div>
         </div>
