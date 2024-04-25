@@ -15,17 +15,18 @@ class Prescription(models.Model):
     report on the status of online PXs, the default is set to 'To be Processed'
     The default for Collected/Delivered is 'Collected'
     '''
-    status = [
+    PX_STATUS = [
         ('0', 'To be Processed'),
         ('1', 'Being Processed'),
         ('2', 'Processed'),
         ('3', 'Cannot be Processed'),
     ]
 
-    delivery = [
+    PX_DELIVERY = [
         ('0', 'Being Collected'),
         ('1', 'Being Delivered'),
     ]
+    
     user = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name='prescription_user'
         )  
@@ -37,5 +38,5 @@ class Prescription(models.Model):
     dr_full_name = models.CharField(max_length=50, null=False, blank=False)
     px_image = models.ImageField(null=True, blank=True)
     date_sent = models.DateTimeField(auto_now_add=True)
-    px_status = models.CharField(max_length=20, choices=status, default=0)
-    px_delivery = models.CharField(max_length=50, choices=delivery, default=0)
+    px_status = models.CharField(max_length=20, choices=PX_STATUS, default=0)
+    px_delivery = models.CharField(max_length=50, choices=PX_DELIVERY, default=0)

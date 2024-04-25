@@ -27,7 +27,7 @@
             <form method="POST" action="{% url 'order_px' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
-                    {% if field.name != 'image' %}
+                    {% if field.name != 'px_image' %}
                         {{ field | as_crispy_field }}
                     {% else %}
                         {{ field }}
@@ -36,7 +36,7 @@
                 <div class="text-right">
                     <a href="{% url 'home' %}" class="btn btn-outline-purple rounded-0">Cancel</a>
                     <button aria-label="order prescription" class="btn btn-purple rounded-0" type="submit">Order Prescription</button>
-                </div>
+                </div>  
             </form>
         </div>
     </div>

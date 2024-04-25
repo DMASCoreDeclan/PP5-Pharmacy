@@ -65,10 +65,6 @@ def add_article(request):
     else:
         form = CommunicationForm()
 
-
-
-
-
     form = CommunicationForm()
     template = 'home/add_article.html'
     context = {
