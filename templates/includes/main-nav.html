@@ -23,6 +23,7 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
+                <a href="{% url 'order_px' %}" class="dropdown-item">Prescriptions </a>
                 <a href="{% url 'all_products' %}?category=special_offer" class="dropdown-item">Special Offer </a>
                 <a href="{% url 'all_products' %}?category=cosmetics,fragrances" class="dropdown-item">Fragrances &amp; Cosmetics </a>
                 <a href="{% url 'all_products' %}?category=healthcare" class="dropdown-item">Healthcare </a>
