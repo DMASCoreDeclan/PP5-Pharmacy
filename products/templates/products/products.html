@@ -24,11 +24,17 @@ content="{{ product.brand }}">
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
-            {% for c in current_categories %}
-            <a class="category-badge text-decoration-none" href="{% url 'all_products'%}?category={{ c.name }}">
+            <!-- There are no products with category "Prescriptions", this ensure a link to Prescriptions even thought there are
+            no products with that Category -->
+            <a class="category-badge text-decoration-none" href="{% url 'order_px'%}">
                 <span
-                    class="p-2 mt-2 badge btn-purple text-white rounded-0 border border-purple">{{ c.friendly_name }}</span>
+                    class="p-2 mt-2 badge btn-purple text-white rounded-0 border border-purple">Prescription</span>
             </a>
+            {% for c in current_categories %}
+                <a class="category-badge text-decoration-none" href="{% url 'all_products'%}?category={{ c.name }}">
+                    <span
+                        class="p-2 mt-2 badge btn-purple text-white rounded-0 border border-purple">{{ c.friendly_name }}</span>
+                </a>
             {% endfor %}
             <hr class="w-50 mb-1">
         </div>
