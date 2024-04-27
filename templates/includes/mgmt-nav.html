@@ -1,0 +1,51 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <!-- <li class="nav-item dropdown">
+            <a href="{% url 'home' %}" class="logo-font font-weight-bold nav-link text-black mr-5" aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+        </li> -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'all_products' %}" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="shop-link">
+                <a href="{% url 'add_product' %}" class="dropdown-item">Add Product </a>
+                <a href="{% url 'all_products' %}" class="dropdown-item">Edit Product </a>
+                <a href="{% url 'all_products' %}" class="dropdown-item">Delete Product </a>
+                <a href="{% url 'all_products' %}" class="dropdown-item">All Products </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'all_products' %}" id="category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Orders
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="category-link">
+                <a href="{% url 'order_px' %}" class="dropdown-item">Prescriptions </a>
+                <a href="{% url 'all_products' %}?category=special_offer" class="dropdown-item">Special Offer </a>
+                <a href="{% url 'all_products' %}?category=cosmetics,fragrances" class="dropdown-item">Fragrances &amp; Cosmetics </a>
+                <a href="{% url 'all_products' %}?category=healthcare" class="dropdown-item">Healthcare </a>
+                <a href="{% url 'all_products' %}?category=mens_care" class="dropdown-item">Men's Care </a>
+                <a href="{% url 'all_products' %}?category=vitamins_and_minerals" class="dropdown-item">Vitamins &amp; Minerals	</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="shop-instore-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Prescriptions
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+                <!-- <a href="" class="dropdown-item">Instore Products</a> -->
+                <!-- <a href="" class="dropdown-item">Services</a> -->
+                <a href="{% url 'healthcare_advice' %}" class="dropdown-item">Healthcare</a>
+                <a href="{% url 'all_products' %}" class="dropdown-item">Buy Online</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Articles
+            </a>
+        </li>
+    </ul>
+</div>

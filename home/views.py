@@ -13,6 +13,13 @@ def index(request):
     return render(request, 'home/index.html')
 
 
+def mgmt_console(request):
+    '''
+    A view to return the Management Console page
+    For Product, Article, Orders and PXs
+    '''
+    return render(request, 'home/mgmt_console.html')
+
 def subscribe(request):
     '''
     <!-- render code for mailchimp.com newsletter -->

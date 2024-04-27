@@ -8,4 +8,5 @@ urlpatterns = [
     path('healthcare_advice/add/', views.add_article, name='add_article'),
     path('healthcare_advice/edit/<slug:slug>/<int:article_id>', views.edit_article, name='edit_article'),
     path('subscribe/', views.subscribe, name='subscribe'),
+    path('mgmt_console/', views.mgmt_console, name='mgmt_console'),
 ]
