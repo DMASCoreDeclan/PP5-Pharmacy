@@ -17,6 +17,8 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = Category.objects.all()
+    # exclude prescription from list of Categories
+    categories = categories.exclude(name__exact='prescription')
     sort = None
     direction = None
 
@@ -40,7 +42,7 @@ def all_products(request):
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
-            # categories = Category.objects.filter(name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -87,6 +89,7 @@ def add_product(request):
 
     if request.method =='POST':
         form = ProductForm(request.POST, request.FILES)
+        print(form.rating)
         if form.is_valid():
             product = form.save()
             messages.success(request, f'Successfully added product!')

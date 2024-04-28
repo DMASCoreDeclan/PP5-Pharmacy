@@ -1,6 +1,6 @@
 from django import forms
 from .models import Product, Category, ProductBundle
-from .widgets import CustomClearableFileInput
+from .widgets import CustomClearableFileInput, RatingInput
 
 
 class ProductForm(forms.ModelForm):
@@ -11,6 +11,7 @@ class ProductForm(forms.ModelForm):
         exclude = ['large_image']
 
     thumbnail = forms.ImageField(label='Product Image', required=False, widget=CustomClearableFileInput)
+    rating = forms.DecimalField(label='Rating', required=False, widget=RatingInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -20,4 +21,5 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-purple rounded-0'
+
 

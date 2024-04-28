@@ -24,8 +24,6 @@ def order_px(request):
         form = PrescriptionForm(request.POST, request.FILES)
         if form.is_valid():
             px_order = form.save(commit=False)
-            # px_order.slug = slugify(article.title)
-            # px_order.author = request.user
             px_order.save()
             messages.success(
                 request, 
