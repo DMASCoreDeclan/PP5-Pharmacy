@@ -16,7 +16,7 @@ class PrescriptionForm(forms.ModelForm):
         fields = '__all__'
         exclude = ['user', 'px_status']
 
-    px_image = forms.ImageField(label='PrescriptionImage', required=False, widget=CustomClearableFileInput)
+    px_image = forms.ImageField(label='PrescriptionImage', required=True, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
