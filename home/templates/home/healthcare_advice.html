@@ -51,8 +51,9 @@
                                         data-target="#{{ article.slug }}">
                                         Read More &rarr;
                                     </button>
-                                    <!-- Modal -->
                                 {% endif %}
+
+                                <!-- Modal -->
                                 <div class="modal fade" id="{{ article.slug }}" tabindex="-1" role="dialog"
                                     aria-labelledby="{{ article.slug }}Title" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -67,9 +68,7 @@
                                                 {{ article.content|safe }}
                                             </div>
                                             <div class="modal-footer">
-                                                <button aria-label="close" type="button" class="btn btn-purple"
-                                                    data-dismiss="modal">Close</button>
-                                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                                <button aria-label="close" type="button" class="btn btn-purple" data-dismiss="modal">Close</button>
                                             </div>
                                         </div>
                                     </div>

@@ -108,6 +108,17 @@ def add_product(request):
 
 
 @login_required
+def edit_products(request):
+    products = Product.objects.all()
+    template = 'products/edit_products.html'
+    context = {
+        'products': products,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def edit_product(request, product_id):
     """
     Edit a product in the store
@@ -139,18 +150,38 @@ def edit_product(request, product_id):
 
 
 @login_required
-def delete_product(request, product_id):
+def delete_products(request):
     """
     Delete a product in the store
     """
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')
         return redirect(reverse('home'))
+        
+    products = Product.objects.all()
+    # if request.method == 'POST':
+    #     product.delete()
+    #     return render('products.html')
 
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product successfully deleted!')
-    return redirect(reverse('all_products'))
+    template = 'products/delete_products.html'
+    context = {
+        'products': products,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_product(request):
+    """
+    Delete a product in the store
+    """
+    # if not request.user.is_staff:
+    #     messages.error(request, 'Only members of the Store Team can do that')
+    #     return redirect(reverse('home'))
+    
+    # print(product_id)
+    return render(request, 'products/delete_product.html')
 
 
 def handle_404(request, exceptions):
