@@ -84,6 +84,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
+            os.path.join(BASE_DIR, 'utils'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -93,7 +94,9 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.contexts.cart_contents',
+                # move contexts from cart to utils for easier administration
+                'utils.contexts.cart_contents',
+                'utils.contexts.base_template_name_context_processor',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
