@@ -89,7 +89,6 @@ def add_product(request):
 
     if request.method =='POST':
         form = ProductForm(request.POST, request.FILES)
-        print(form.rating)
         if form.is_valid():
             product = form.save()
             messages.success(request, f'Successfully added product!')
@@ -159,9 +158,6 @@ def delete_products(request):
         return redirect(reverse('home'))
         
     products = Product.objects.all()
-    # if request.method == 'POST':
-    #     product.delete()
-    #     return render('products.html')
 
     template = 'products/delete_products.html'
     context = {
@@ -172,16 +168,53 @@ def delete_products(request):
 
 
 @login_required
-def delete_product(request):
+def delete_product(request, product_id):
     """
-    Delete a product in the store
+    Edit a product in the store
     """
-    # if not request.user.is_staff:
-    #     messages.error(request, 'Only members of the Store Team can do that')
-    #     return redirect(reverse('home'))
-    
-    # print(product_id)
-    return render(request, 'products/delete_product.html')
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        product.delete() # ProductForm(request.POST, request.FILES, instance=product)
+        # if form.is_valid():
+    #     form.save()
+        messages.success(request, 'Successfully deleted product!')
+        return redirect(reverse('all_products'))
+    else:
+        messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    # else:
+    #     form = ProductForm(instance=product)
+    #     messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/products.html'
+    # context = {
+    #     'form': form,
+    #     'product': product,
+    # }
+# 
+    return render(request, template)
+
+
+# def delete_product(request, product_id):
+#     """
+#     Delete a product in the store
+#     """
+#     if not request.user.is_staff:
+#         messages.error(request, 'Only members of the Store Team can do that')
+#         return redirect(reverse('products/all_products.html'))
+
+#     if request.method == 'POST':
+#         product = get_object_or_404(Product, pk=product_id)
+#         product.delete()
+#         messages.success(request, 'Successfully deleted product!')
+#     else:
+#         messages.error(request, 'the product could not be deleted')
+#         return render(request, 'products/all_products.html')
+
+#     return render(request, 'products/all_products.html')
 
 
 def handle_404(request, exceptions):

@@ -67,67 +67,98 @@ content="{{ product.brand }}">
             </div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
-                        <a href="#" title="Delete {{ product }}">
-                            {% include 'includes/product_bundle_picture.html' %}
-                        </a>
-                        <div class="card-body pb-0">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
                             <a href="#" title="Delete {{ product }}">
-                                <p class="mb-0"><strong>{{ product.brand }}</strong></p>     
-                                <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                                {% include 'includes/product_bundle_picture.html' %}
                             </a>
-                        </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">€{{product.price}}</p>
-                                    {% if product.category %}
-                                    <a href="#" title="Delete {{ product }}">
-                                        <p class="small mt-1 mb-0"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name}}</p>
-                                    </a>  
-                                        
-                                    {% endif %}
+                            <div class="card-body pb-0">
+                                <a href="#" title="Delete {{ product }}">
+                                    <p class="mb-0"><strong>{{ product.brand }}</strong></p>     
+                                    <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                                </a>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">€{{product.price}}</p>
+                                        {% if product.category %}
+                                        <a href="#" title="Delete {{ product }}">
+                                            <p class="small mt-1 mb-0"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name}}</p>
+                                        </a>  
+                                            
+                                        {% endif %}
 
-                                    {% if product.rating %}
-                                        <a href="#" title="Delete {{ product }}"> 
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                        </a>
-                                    {% elif product.rating == 0 %}
-                                        <a href="#" title="Delete {{ product }}"> 
-                                            <small class="text-muted">No Rating</small>
-                                        </a>    
-                                    {% else %}
-                                        <a href="#" title="Delete {{ product }}"> 
-                                            <small class="text-muted">No Rating</small>
-                                        </a>    
-                                    {% endif %}
-                                    <a href="{% url 'delete_product' %}" title="Delete {{ product }}"> Delete </a>                                     
+                                        {% if product.rating %}
+                                            <a href="#" title="Delete {{ product }}"> 
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            </a>
+                                        {% elif product.rating == 0 %}
+                                            <a href="#" title="Delete {{ product }}"> 
+                                                <small class="text-muted">No Rating</small>
+                                            </a>    
+                                        {% else %}
+                                            <a href="#" title="Delete {{ product }}"> 
+                                                <small class="text-muted">No Rating</small>
+                                            </a>    
+                                        {% endif %}
+                                        <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">
+                                            Delete this {{ product.category.friendly_name }}
+                                        </button>
+                                        <!-- End DELETE Modal -->
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
+                    <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->               
+                    <!-- Modal -->
+                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-abel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete {{ product.name }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                
+                                <form method="POST" action="{% url 'delete_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                                    {% csrf_token %}                                
+                                    <div class="text-right">
+                                        <a href="{% url 'delete_products' %}" class="btn btn-outline-purple rounded-0">Cancel</a>
+                                        <button aria-label="delete product {{ product.name }}" class="btn btn-purple rounded-0" type="submit">Delete Product</button>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                        
+                    <!-- End DELETE Modal -->
+
+                    {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

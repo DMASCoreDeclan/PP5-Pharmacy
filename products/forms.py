@@ -7,8 +7,17 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
-        exclude = ['large_image']
+        fields = (
+            'category', 
+            'brand', 
+            'name', 
+            'description', 
+            'has_sizes', 
+            'size', 
+            'price', 
+            'rating', 
+            'thumbnail', 
+        )
 
     thumbnail = forms.ImageField(label='Product Image', required=False, widget=CustomClearableFileInput)
     rating = forms.DecimalField(label='Rating', required=False, widget=RatingInput)
