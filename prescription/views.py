@@ -21,10 +21,10 @@ def order_px(request):
         return redirect(reverse('login'))
 
     if request.method == 'POST':
-        form = PrescriptionForm(request.POST, request.FILES)
+        form = PrescriptionForm(request.POST, request.FILES, request.user)
         if form.is_valid():
-            px_order = form.save(commit=False)
-            px_order.save()
+            form.instance.user = request.user
+            form.save()
             messages.success(
                 request, 
                 f'Your Prescription has been successfully sent!'
