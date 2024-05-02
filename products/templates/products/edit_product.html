@@ -50,7 +50,10 @@
     {% include 'includes/white-footer.html' %}
 {% endblock footer %}
 
-{% block postloadjs %}
+{% block postloadjs %}    
+{% endblock postloadjs %}
+
+{% block extra_postloadjs %}
     {{ block.super}}
     <script type="text/javascript">
         $('#new-image').change(function() {
@@ -59,4 +62,4 @@
         });
 
     </script>
-{% endblock postloadjs %}
+{% endblock extra_postloadjs %}

@@ -177,9 +177,12 @@ content="{{ product.brand }}">
 {% endblock footer %}
 
 {% block postloadjs %}
+{% endblock postloadjs %}
+
+{% block extra_postloadjs %}
     <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
     {{ block.super }}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-{% endblock postloadjs %}
+{% endblock extra_postloadjs %}

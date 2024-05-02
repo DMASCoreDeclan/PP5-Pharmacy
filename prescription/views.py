@@ -27,7 +27,6 @@ def order_px(request):
             form.save(commit=False)
             form.instance.user = request.user
             form.user_profile = request.user
-            print(form.user_profile)
             form.save()
             messages.success(
                 request, 
@@ -43,7 +42,7 @@ def order_px(request):
     else:
         form = PrescriptionForm()
 
-    template = "prescription/order_px.html"
+    template = "prescription/px_order.html"
     context = {
         'form': form
     }

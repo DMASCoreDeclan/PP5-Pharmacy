@@ -59,14 +59,12 @@ def order_history(request, order_number):
 def px_order_history(request, px_order_number):
     px_order = get_object_or_404(Prescription, px_order_number=px_order_number)
 
-    print(px_order_number)
-
     messages.info(request, (
         f'This is a past confirmation for {px_order_number}.  '
         'A confirmation email was sent on that date'
     ))
 
-    template = 'checkout/checkout_success.html'
+    template = 'prescription/prescription_history.html'
     context = {
         'px_order': px_order,
         'from_profile': True,

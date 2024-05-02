@@ -125,9 +125,10 @@
     {% include 'includes/white-footer.html' %}
 {% endblock footer %}
 
-{% block postloadjs %}
-        {{ block.super }}
-        <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}">
-            
-        </script>
+{% block postloadjs %}   
 {% endblock postloadjs %}
+
+{% block extra_postloadjs %}
+    {{ block.super }}
+        <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock extra_postloadjs %}

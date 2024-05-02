@@ -53,6 +53,9 @@
 {% endblock footer %}
 
 {% block postloadjs %}
+{% endblock postloadjs %}
+
+{% block extra_postloadjs %}
     {{ block.super}}
     <script type="text/javascript">
         $('#new-image').change(function() {
@@ -64,4 +67,4 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-{% endblock postloadjs %}
+{% endblock extra_postloadjs %}
