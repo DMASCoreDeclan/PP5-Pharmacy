@@ -33,8 +33,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu108.gitpod.io',
-    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu110.gitpod.io',
+    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu112.gitpod.io', 
     'phelans-pharmacy-bf69b3045245.herokuapp.com',
 ]
 

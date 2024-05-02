@@ -6,7 +6,6 @@ from .models import Prescription
 
 class PrescriptionAdmin(admin.ModelAdmin):
     fieds = (
-        # 'user', 
         'full_name', 
         'email', 
         'phone_number', 

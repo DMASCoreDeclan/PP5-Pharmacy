@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .forms import PrescriptionForm
+from profiles.models import UserProfile
 # Create your views here.
 
 
@@ -23,7 +24,10 @@ def order_px(request):
     if request.method == 'POST':
         form = PrescriptionForm(request.POST, request.FILES, request.user)
         if form.is_valid():
+            form.save(commit=False)
             form.instance.user = request.user
+            form.user_profile = request.user
+            print(form.user_profile)
             form.save()
             messages.success(
                 request, 
