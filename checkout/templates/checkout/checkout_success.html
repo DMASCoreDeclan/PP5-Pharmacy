@@ -205,9 +205,10 @@
     {% include 'includes/white-footer.html' %}
 {% endblock footer %}
 
-{% endblock extra_postloadjs %}
+{% block extra_postloadjs %}
     {{ block.super }}
+    <script src="{% static 'js/script.js' %}"></script>
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-{% block extra_postloadjs %}
+{% endblock extra_postloadjs %}

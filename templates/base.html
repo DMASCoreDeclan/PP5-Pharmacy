@@ -168,12 +168,13 @@
         {% endif %}
         
         {% block postloadjs %}
-            <script>
-                $('.toast').toast('show');
-            </script>
+            <script src="{% static 'js/script.js' %}"></script>
+            <script>$('.toast').toast('show')</script>
         {% endblock postloadjs %}
         
         {% block extra_postloadjs %}
+            <script src="{% static 'js/script.js' %}"></script>
+            <script>$('.toast').toast('show')</script>
         {% endblock extra_postloadjs %}
     </body>
 </html>
