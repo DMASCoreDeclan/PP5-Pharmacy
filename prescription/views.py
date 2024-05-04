@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .forms import PrescriptionForm
 from profiles.models import UserProfile
+from .models import Prescription 
 # Create your views here.
 
 
@@ -48,3 +49,33 @@ def order_px(request):
     }
 
     return render(request, template, context)
+
+
+def px_admin(request):
+    '''
+    Display PX Orders for processing turn To Be Processed -> Processed
+    '''
+    PX_STATUS = dict(Prescription.PX_STATUS)
+    form = Prescription.objects.all()
+  
+    if request.method == 'GET':
+        Prescription.objects.all()
+    
+    if request.method == 'POST':
+        form = Prescription(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 
+                f'Your Prescription has been successfully sent!'
+                )
+            return redirect(reverse('px_admin'))
+  
+    context = {
+        'form': form, 
+        'PX_STATUS': PX_STATUS, 
+        }
+
+    return render(request, 'prescription/px_admin.html', context)
+
+
