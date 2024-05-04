@@ -73,8 +73,6 @@
                 {% else %}
                     <p class="text-muted">You have no Order History</p> 
                 {% endif %}
-            <!-- </div>
-            <div class="col-12 col-lg-6"> -->
                 {% if px_orders %}
                     <p class="text-muted">Prescription History</p>
                     <div class="order-history table-responsive">
@@ -84,7 +82,6 @@
                                     <th>Prescription Order Number</th>
                                     <th>Prescription Sent Date</th>
                                     <th>Doctors Name</th>
-                                    <!-- <th>Order total</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,18 +91,6 @@
                                         <a href="{% url 'px_order_history' px.px_order_number %}" title="{{ px.px_order_number }}">{{ px.px_order_number|truncatechars:6}}</a>
                                     </td>
                                     <td>{{ px.date_sent }}</td>
-                                    <!-- <td>
-                                        <ul class="list-unstyled">
-                                            {% for item in order.lineitems.all %}
-                                                <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper}}
-                                                    {% endif %}
-                                                    {{ item.product.name}} x{{ item.quantity }}
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </td> -->
                                     <td>{{ px.dr_full_name }}</td>
                                 </tr>
                                 {% endfor %}

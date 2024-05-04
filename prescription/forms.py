@@ -1,9 +1,11 @@
 from django import forms
 from django.db import models
 from django.contrib.auth.models import User
+
 from .models import Prescription
 from .widgets import CustomClearableFileInput
 from profiles.models import UserProfile
+
 
 PX_DELIVERY = [
         ('0', 'Collection'),
@@ -24,6 +26,4 @@ class PrescriptionForm(forms.ModelForm):
             
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-purple rounded-0'
-
-
 
