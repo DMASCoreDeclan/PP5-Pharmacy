@@ -1,5 +1,5 @@
 from django import forms
-from .models import CommunicationContent, CommunicationType, CommunicationStatus
+from .models import CommunicationContent, CommunicationType, CommunicationStatus, User
 from .widgets import CustomClearableFileInput
 
 class CommunicationForm(forms.ModelForm):
@@ -7,11 +7,10 @@ class CommunicationForm(forms.ModelForm):
     class Meta: 
         model = CommunicationContent
         fields = '__all__'
-        exclude = ['slug', 'author', 'content_type']
+        exclude = ['slug',]
 
     image = forms.ImageField(label='Article Image', required=False, widget=CustomClearableFileInput)
    
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         

@@ -13,13 +13,6 @@ def index(request):
     return render(request, 'home/index.html')
 
 
-def mgmt_console(request):
-    '''
-    A view to return the Management Console page
-    For Product, Article, Orders and PXs
-    '''
-    return render(request, 'home/mgmt_console.html')
-
 def subscribe(request):
     '''
     <!-- render code for mailchimp.com newsletter -->
@@ -27,20 +20,19 @@ def subscribe(request):
     return render(request, 'home/subscribe.html')
 
 
-def healthcare_advice(request):
+def all_articles(request):
     """
-    View to display PUBLISHED articles that are of type WEBSITE_ARTICLE
+    View to display articles that
     """
-    if request.user.is_staff:
-        web_article = CommunicationContent.objects.all().filter(content_type=2)
-    else:
-        web_article = CommunicationContent.objects.all().filter(
-        status=2, content_type=2
-        )
+    articles = CommunicationContent.objects.all()
+    # else:
+    #     web_article = CommunicationContent.objects.all().filter(
+    #     status=2, content_type=2
+    #     )
 
-    template = 'home/healthcare_advice.html'
+    template = 'home/all_articles.html'
     context = {
-        'webarticles': web_article,
+        'articles': articles,
     }
 
     return render(request, template, context)
@@ -57,8 +49,8 @@ def add_article(request):
 
     if request.method == 'POST':
         form = CommunicationForm(request.POST, request.FILES)
-        type = CommunicationType.objects.filter(name='website_article')
-        status = CommunicationStatus.objects.filter(id=2)
+        type = CommunicationType.objects.all() # filter(name='website_article')
+        status = CommunicationStatus.objects.all() # filter(id=2)
         if form.is_valid():
             article = form.save(commit=False)
             article.slug = slugify(article.title)

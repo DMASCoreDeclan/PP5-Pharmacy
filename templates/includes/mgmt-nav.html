@@ -37,14 +37,19 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="{% url 'px_admin' %}" class="dropdown-item">PX Administration</a>
-                <a href="{% url 'healthcare_advice' %}" class="dropdown-item">Healthcare</a>
                 <a href="{% url 'all_products' %}" class="dropdown-item">Buy Online</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="articles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Articles
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="articles">
+                <a href="{% url 'add_article' %}" class="dropdown-item">Add Article </a>
+                <a href="{% url 'all_articles' %}" class="dropdown-item">Edit Article </a>
+                <a href="{% url 'all_articles' %}" class="dropdown-item">Delete Article </a>
+                <a href="{% url 'all_articles' %}" class="dropdown-item">View Articles (Custmer View) </a>
+            </div>
         </li>
     </ul>
 </div>
