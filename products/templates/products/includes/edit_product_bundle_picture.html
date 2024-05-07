@@ -1,0 +1,28 @@
+{% if not product.get_product_list %}
+
+    {% if product.thumbnail %}
+        <a href="{% url 'edit_product' product.id %}" title="Edit {{ product }}">
+            <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="An image showing {{ product.name }}" class="card-img-top img-fluid">
+        </a>
+    {% else %}
+        <a href="{% url 'edit_product' product.id %}" title="Edit {{ product }}">
+            <img src="{{ MEDIA_URL }}noimage.png" alt="There is no image for {{ product.name }}." class="card-img-top img-fluid">
+        </a>
+    {% endif %}
+{% else %}
+    <div class="row">
+        {% for product_item in product.get_product_list %}
+            <div class="col-4">
+                {% if product_item.thumbnail %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL}}{{ product_item.thumbnail }}" alt="An image showing {{ product_item.name }}" class="card-img-top img-fluid">
+                    </a>
+                {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="There is no image for {{ product_item.name }}" class="card-img-top img-fluid">
+                    </a>
+                {% endif %}
+            </div>
+        {%endfor%}
+    </div>
+{% endif %}
