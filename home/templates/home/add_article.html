@@ -52,12 +52,12 @@
 {% endblock postloadjs %}
 
 
-{% endblock extra_postloadjs %}
+{% block extra_postloadjs %}
     <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to ${file.name}`);
         });
     </script>
-{% block extra_postloadjs %}
+{% endblock extra_postloadjs %}
 
