@@ -34,6 +34,7 @@
                     {% if field.name != 'px_image' %}
                         {{ field | as_crispy_field }}
                     {% else %}
+                        <p>Only image files can be uploaded (png/jpg/jpeg).  PDFs cannot be uploaded at this time</p>
                         {{ field }}
                     {% endif %}
                 {% endfor %}
