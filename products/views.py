@@ -170,7 +170,7 @@ def delete_products(request):
 @login_required
 def delete_product(request, product_id):
     """
-    Edit a product in the store
+    Delete a product in the store
     """
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')

@@ -4,11 +4,12 @@ from django.db import models
 from django.template.defaultfilters import truncatewords
 from django.contrib.auth.models import User
 
-"""
-Model to select the status of the Communication Status
-of either Published or Draft
-"""
+
 class CommunicationStatus(models.Model):
+    """
+    Model to select the status of the Communication Status
+    of either Published or Draft
+    """
 
     class Meta:
         verbose_name_plural = 'Status'
@@ -19,11 +20,12 @@ class CommunicationStatus(models.Model):
         return self.status
 
 
-"""
-Model to select the status of the Communication Type
-of either Newssletter or Website
-"""
+
 class CommunicationType(models.Model):
+    """
+    Model to select the status of the Communication Type
+    of either Newssletter or Website
+    """
 
     class Meta:
         verbose_name_plural = 'Communication Type'
@@ -38,10 +40,11 @@ class CommunicationType(models.Model):
         return self.friendly_name
 
 
-"""
-Model to store the status of the Communication Content
-"""
+
 class CommunicationContent(models.Model):
+    """
+    Model to store the status of the Communication Content
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='pharmacy_content')

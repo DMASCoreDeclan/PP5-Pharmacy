@@ -60,7 +60,7 @@ def add_article(request):
                 request, 
                 f'{request.user}, you\'ve aded a new article!'
                 )
-            return redirect(reverse('healthcare_advice'))
+            return redirect(reverse('all_articles'))
     else:
         form = CommunicationForm()
 
@@ -74,7 +74,7 @@ def add_article(request):
 
 
 @login_required
-def edit_article(request, slug, article_id):
+def edit_article(request, slug,):
     """
     Edit an article in healthcare_advice
     """
@@ -89,10 +89,9 @@ def edit_article(request, slug, article_id):
         if article_form.is_valid():
             article.author = request.user
             article.slug = slugify(article.title)
-            # article.status = "Published"
             article.save()
             messages.success(request, 'Successfully updated article!')
-            return redirect(reverse('healthcare_advice'))
+            return redirect(reverse('edit_articles'))
         else:
             messages.error(request, 'Failed to update article. Please ensure the form is valid.')
     else:
@@ -106,3 +105,71 @@ def edit_article(request, slug, article_id):
     }
 
     return render(request, template, context)
+
+
+def article_detail(request, article_id):
+    """ A view to return a single article,
+    including sorting and search queries """
+
+    article = get_object_or_404(CommunicationContent, pk=article_id)
+
+    context = {
+        'article': article
+    }
+
+    return render(request, 'home/article_detail.html', context)
+
+
+@login_required
+def delete_article(request, slug):
+    """
+    Delete an article from the store
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('all_articles'))
+
+    article = get_object_or_404(CommunicationContent, slug=slug)
+    
+    if request.method == 'POST':
+        article.delete() 
+        messages.success(request, 'Successfully deleted article!')
+        return redirect(reverse('all_articles'))
+    else:
+        messages.error(request, 'Failed to delete article. Please ensure the form is valid.')
+        return redirect(reverse('delete_articles'))
+
+    template = 'home/all_articles.html'
+
+    return render(request, template)
+
+
+@login_required
+def delete_articles(request):
+    """
+    Delete articles from the store
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('home'))
+        
+    articles = CommunicationContent.objects.all()
+
+    template = 'home/delete_articles.html'
+    context = {
+        'articles': articles,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_articles(request):
+    articles = CommunicationContent.objects.all()
+    template = 'home/edit_articles.html'
+    context = {
+        'articles': articles,
+    }
+
+    return render(request, template, context)
+    

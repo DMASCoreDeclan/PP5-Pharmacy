@@ -102,11 +102,10 @@ content="{{ product.brand }}">
                                         {% endif %}
                                         <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-product-modal">
                                             Delete this {{ product.category.friendly_name }}
                                         </button>
                                         <!-- End DELETE Modal -->
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -114,11 +113,11 @@ content="{{ product.brand }}">
                     </div>
                     <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->               
                     <!-- Modal -->
-                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-abel" aria-hidden="true">
+                        <div class="modal fade" id="delete-product-modal" tabindex="-1" role="dialog" aria-labelledby="delete-product-modal-label" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Delete {{ product.name }}</h5>
+                                <h5 class="modal-title" id="delete-product-modal-label">Delete {{ product.name }}</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
