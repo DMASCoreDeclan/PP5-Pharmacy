@@ -20,7 +20,6 @@ class CommunicationStatus(models.Model):
         return self.status
 
 
-
 class CommunicationType(models.Model):
     """
     Model to select the status of the Communication Type
@@ -38,7 +37,6 @@ class CommunicationType(models.Model):
 
     def get_friendly_name(self):
         return self.friendly_name
-
 
 
 class CommunicationContent(models.Model):
@@ -72,3 +70,19 @@ class CommunicationContent(models.Model):
         return self.title
 
     
+class Service(models.Model):
+    """
+    Model to select the status of the Communication Type
+    of either Newssletter or Website
+    """
+
+    class Meta:
+        verbose_name_plural = 'Services'
+
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='service_content')
+    icon = models.ImageField(null=False)
+    title = models.CharField(max_length=254)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title

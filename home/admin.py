@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CommunicationType, CommunicationStatus, CommunicationContent
+from .models import CommunicationType, CommunicationStatus, CommunicationContent, Service
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(CommunicationStatus)
@@ -49,3 +49,22 @@ class CommunicationContentAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
+
+
+@admin.register(Service)
+class ServiceAdmin(SummernoteModelAdmin):
+    list_display = (
+        'author',
+        'title',
+        'icon',
+        'content',
+    )
+    fields = (
+        'author',
+        'title',
+        'icon',
+        'content',
+    )
+    ordering = ('title',)
+    summernote_fields = ('content', 'title',)
+
