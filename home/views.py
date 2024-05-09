@@ -131,6 +131,13 @@ def delete_article(request, slug):
 
     article = get_object_or_404(CommunicationContent, slug=slug)
     
+    context ={
+        'article': article, 
+    }
+
+    if request.method == 'GET':
+        return render(request, 'home/confirm_delete.html', context)
+
     if request.method == 'POST':
         article.delete() 
         messages.success(request, 'Successfully deleted article!')
@@ -138,10 +145,6 @@ def delete_article(request, slug):
     else:
         messages.error(request, 'Failed to delete article. Please ensure the form is valid.')
         return redirect(reverse('delete_articles'))
-
-    template = 'home/all_articles.html'
-
-    return render(request, template)
 
 
 @login_required
