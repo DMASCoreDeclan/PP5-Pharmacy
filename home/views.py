@@ -232,3 +232,114 @@ def add_service(request):
 
     return render(request, template, context)
 
+@login_required
+def edit_service(request, service_id,):
+    """
+    Edit a service
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('home'))
+
+    service = get_object_or_404(Service, pk=service_id)
+
+    service_form = ServiceForm(
+        request.POST, 
+        request.FILES, 
+        instance=service
+        )
+
+    if request.method == 'POST': 
+        if service_form.is_valid():
+            service.author = request.user
+            service.save()
+            messages.success(request, 'Successfully updated service!')
+            return redirect(reverse('edit_services'))
+        else:
+            messages.error(
+                request, 
+                'Failed to update service. Please ensure the form is valid.'
+                )
+    else:
+        service_form = ServiceForm(instance=service)
+        messages.info(request, f'You are editing { service.title }')
+
+    template = 'home/edit_service.html'
+    context = {
+        'service_form': service_form,
+        'service': service,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_services(request):
+    services = Service.objects.all()
+    template = 'home/edit_services.html'
+    context = {
+        'services': services,
+    }
+
+    return render(request, template, context)
+
+def service_detail(request, service_id):
+    """ A view to return a single article,
+    including sorting and search queries """
+
+    service = get_object_or_404(Service, pk=service_id)
+
+    context = {
+        'service': service
+    }
+
+    return render(request, 'home/service_detail.html', context)
+
+@login_required
+def delete_services(request):
+    """
+    Presents a list of all articles and adds a DELETE button to each one
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('home'))
+        
+    services = Service.objects.all()
+
+    template = 'home/delete_services.html'
+    context = {
+        'services': services,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def delete_service(request, service_id):
+    """
+    Delete an service from the store if DELETE is confirmed
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('all_services'))
+
+    service = get_object_or_404(Service, pk=service_id)
+    
+    context ={
+        'service': service, 
+    }
+
+    # Presents Delete Confirmation Article before deleting
+    if request.method == 'GET':
+        return render(request, 'home/confirm_delete_service.html', context)
+
+    # Delete Article after confirmation
+    if request.method == 'POST':
+        service.delete() 
+        messages.success(request, 'Successfully deleted service!')
+        return redirect(reverse('all_services'))
+    else:
+        messages.error(
+            request, 
+            'Failed to delete service. Please ensure the form is valid.'
+            )
+        return redirect(reverse('delete_services'))

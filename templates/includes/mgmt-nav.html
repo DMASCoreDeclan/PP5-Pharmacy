@@ -46,8 +46,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="articles">
                 <a href="{% url 'add_service' %}" class="dropdown-item">Add Service </a>
-                <a href="#" class="dropdown-item">Edit Service </a>
-                <a href="#" class="dropdown-item">Delete Service </a>
+                <a href="{% url 'edit_services' %}" class="dropdown-item">Edit Services </a>
+                <a href="{% url 'delete_services' %}" class="dropdown-item">Delete Services </a>
                 <a href="{% url 'all_services' %}" class="dropdown-item">All Service (Custmer View) </a>
             </div>
         </li>
@@ -57,8 +57,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="articles">
                 <a href="{% url 'add_article' %}" class="dropdown-item">Add Article </a>
-                <a href="{% url 'edit_articles' %}" class="dropdown-item">Edit Article </a>
-                <a href="{% url 'delete_articles' %}" class="dropdown-item">Delete Article </a>
+                <a href="{% url 'edit_articles' %}" class="dropdown-item">Edit Articles </a>
+                <a href="{% url 'delete_articles' %}" class="dropdown-item">Delete Articles </a>
                 <a href="{% url 'all_articles' %}" class="dropdown-item">All Articles (Custmer View) </a>
             </div>
         </li>

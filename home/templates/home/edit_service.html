@@ -15,28 +15,28 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-8">
                 <hr>
-                <h2 class="logo-font mb-4">Article Management</h2>
-                <h5 class="text-muted" >Edit Article {{ article.title }}</h5>
+                <h2 class="logo-font mb-4">Service Management</h2>
+                <h5 class="text-muted" >Edit Service {{ service.title|safe }}</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_article' article.slug %}" class="form mb-2" enctype="multipart/form-data">
+            <div class="col-12 col-md-8">
+                <form method="POST" action="{% url 'edit_service' service.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% for field in article_form %}
-                        {% if field.name != 'image' %}
+                    {% for field in service_form %}
+                        {% if field.name != 'icon' %}
                             {{ field | as_crispy_field }}
                         {% else %}
                             {{ field }}
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a href="{% url 'edit_articles' %}" class="btn btn-outline-purple rounded-0">Back</a>
-                        <button aria-label="update article" class="btn btn-purple rounded-0" type="submit">Update Article</button>
+                        <a href="{% url 'edit_services' %}" class="btn btn-outline-purple rounded-0">Back</a>
+                        <button aria-label="update article" class="btn btn-purple rounded-0" type="submit">Update Service</button>
                     </div>
                 </form>
             </div>

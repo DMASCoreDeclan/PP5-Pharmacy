@@ -12,7 +12,7 @@
 </div>
 {% endblock page_header %}
 
-<title>{% block extra_title %} Healthcare Services {% endblock extra_title %}</title>
+<title>{% block extra_title %} Edit Healthcare Services {% endblock extra_title %}</title>
 
 {% block content %}
 <div class="overlay"></div>
@@ -20,14 +20,17 @@
     <div class="row">
         {% for service in services %}
             <div class="card flex-row flex-wrap border-0 col-sm-5 col-md-3 col-lg-3 col-xl-2 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1">
+                <div>
+                    <a href="{% url 'edit_service' service.id %}" class="btn btn-warning link-purple" role="button" title="Edit {{ service.id }}">Edit</a>
+                </div>
                 <div class="card-header border-0 bg-white">
                     <img src="{{MEDIA_URL}}{{ service.icon }}" class="service-icon" alt="an image of {{ service.title }}" />
                 </div>
-                <div class="card-block px-2 mx-auto">
+                <div class="card-block px-2">
                     <h4 class="card-title text-black"><strong>{{ service.title|safe }}</strong></h4>
                     {% if service.content|safe|wordcount > 50 %}
                         <p class="card-text">{{ service.content|safe|truncatewords_html:50 }}</p>
-                        <p>
+                        <p class="mx-auto">
                             <a href="{% url 'service_detail' service.id %}" class="btn btn-purple link-purple" role="button" title="Read more of {{ service.title }}">Read More</a>
                         </p>
                     {% else %}

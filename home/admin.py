@@ -66,5 +66,4 @@ class ServiceAdmin(SummernoteModelAdmin):
         'content',
     )
     ordering = ('title',)
-    summernote_fields = ('content', 'title',)
 
