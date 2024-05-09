@@ -83,7 +83,11 @@ def edit_article(request, slug,):
         return redirect(reverse('home'))
 
     article = get_object_or_404(CommunicationContent, slug=slug)
-    article_form = CommunicationForm(request.POST, request.FILES, instance=article)
+    article_form = CommunicationForm(
+        request.POST, 
+        request.FILES, 
+        instance=article
+        )
 
     if request.method == 'POST': 
         if article_form.is_valid():
@@ -93,7 +97,10 @@ def edit_article(request, slug,):
             messages.success(request, 'Successfully updated article!')
             return redirect(reverse('edit_articles'))
         else:
-            messages.error(request, 'Failed to update article. Please ensure the form is valid.')
+            messages.error(
+                request, 
+                'Failed to update article. Please ensure the form is valid.'
+                )
     else:
         article_form = CommunicationForm(instance=article)
         messages.info(request, f'You are editing {article.title}')
@@ -123,7 +130,7 @@ def article_detail(request, article_id):
 @login_required
 def delete_article(request, slug):
     """
-    Delete an article from the store
+    Delete an article from the store if DELETE is confirmed
     """
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')
@@ -135,22 +142,27 @@ def delete_article(request, slug):
         'article': article, 
     }
 
+    # Presents Delete Confirmation Article before deleting
     if request.method == 'GET':
-        return render(request, 'home/confirm_delete.html', context)
+        return render(request, 'home/confirm_delete_article.html', context)
 
+    # Delete Article after confirmation
     if request.method == 'POST':
         article.delete() 
         messages.success(request, 'Successfully deleted article!')
         return redirect(reverse('all_articles'))
     else:
-        messages.error(request, 'Failed to delete article. Please ensure the form is valid.')
+        messages.error(
+            request, 
+            'Failed to delete article. Please ensure the form is valid.'
+            )
         return redirect(reverse('delete_articles'))
 
 
 @login_required
 def delete_articles(request):
     """
-    Delete articles from the store
+    Presents a list of all articles and adds a DELETE button to each one
     """
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')

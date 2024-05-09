@@ -50,7 +50,7 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('all_products'))
             # icontain makes the contain case insensitive
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries= Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -92,9 +92,12 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, f'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('all_products'))
         else:
-            messages.error(request, 'Failed to add product. Please check the form is valid')
+            messages.error(
+                request, 
+                'Failed to add product. Please check the form is valid'
+                )
     else:
         form = ProductForm()
         
@@ -132,9 +135,12 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('edit_products'))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 
+                'Failed to update product. Please ensure the form is valid.'
+                )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -177,44 +183,25 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+
+    context ={
+        'product': product, 
+    }
+
+    # Presents Delete Confirmation Product before deleting
+    if request.method == 'GET':
+        return render(request, 'products/confirm_delete_product.html', context)
+
+    # Delete Product after confirmation
     if request.method == 'POST':
-        product.delete() # ProductForm(request.POST, request.FILES, instance=product)
-        # if form.is_valid():
-    #     form.save()
+        product.delete() 
         messages.success(request, 'Successfully deleted product!')
         return redirect(reverse('all_products'))
     else:
-        messages.error(request, 'Failed to update product. Please ensure the form is valid.')
-    # else:
-    #     form = ProductForm(instance=product)
-    #     messages.info(request, f'You are editing {product.name}')
-
-    template = 'products/products.html'
-    # context = {
-    #     'form': form,
-    #     'product': product,
-    # }
-# 
-    return render(request, template)
-
-
-# def delete_product(request, product_id):
-#     """
-#     Delete a product in the store
-#     """
-#     if not request.user.is_staff:
-#         messages.error(request, 'Only members of the Store Team can do that')
-#         return redirect(reverse('products/all_products.html'))
-
-#     if request.method == 'POST':
-#         product = get_object_or_404(Product, pk=product_id)
-#         product.delete()
-#         messages.success(request, 'Successfully deleted product!')
-#     else:
-#         messages.error(request, 'the product could not be deleted')
-#         return render(request, 'products/all_products.html')
-
-#     return render(request, 'products/all_products.html')
+        messages.error(
+            request, 
+            'Failed to delete product. Please ensure the form is valid.'
+            )
 
 
 def handle_404(request, exceptions):

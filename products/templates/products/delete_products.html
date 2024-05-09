@@ -69,15 +69,16 @@ content="{{ product.brand }}">
                 {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="mx-auto">
+                                        <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete {{ product.name }}</a>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="#" title="Delete {{ product }}">
                                 {% include 'products/includes/product_bundle_picture.html' %}
-                            </a>
-                            <div class="card-body pb-0">
-                                <a href="#" title="Delete {{ product }}">
-                                    <p class="mb-0"><strong>{{ product.brand }}</strong></p>     
-                                    <p class="mb-0"><strong>{{ product.name }}</strong></p>
-                                </a>
-                            </div>
+                            </a>                            
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
@@ -100,42 +101,11 @@ content="{{ product.brand }}">
                                                 <small class="text-muted">No Rating</small>
                                             </a>    
                                         {% endif %}
-                                        <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-product-modal">
-                                            Delete this {{ product.category.friendly_name }}
-                                        </button>
-                                        <!-- End DELETE Modal -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- DELETE Modal using Bootsrap https://getbootstrap.com/docs/4.4/components/modal/ -->               
-                    <!-- Modal -->
-                        <div class="modal fade" id="delete-product-modal" tabindex="-1" role="dialog" aria-labelledby="delete-product-modal-label" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="delete-product-modal-label">Delete {{ product.name }}</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-                                
-                                <form method="POST" action="{% url 'delete_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                                    {% csrf_token %}                                
-                                    <div class="text-right">
-                                        <a href="{% url 'delete_products' %}" class="btn btn-outline-purple rounded-0">Cancel</a>
-                                        <button aria-label="delete product {{ product.name }}" class="btn btn-purple rounded-0" type="submit">Delete Product</button>
-                                    </div>
-                                </form>
-                            </div>
-                            </div>
-                        </div>
-                        
-                    <!-- End DELETE Modal -->
-
                     {% if forloop.counter|divisibleby:1 %}
                         <div class="col-12 d-sm-none mb-5">
                             <hr>
