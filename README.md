@@ -1,110 +1,95 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Phelans Pharmacy](_docs/phelans-logo-high-cropped.png)
 
-Welcome DMASCoreDeclan Sweeney,
+Welcom to my PP5 Code Institute submission
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Background
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<details>
 
-## Gitpod Reminders
+<summary>Overview</summary>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Phelans pharmacy already have a website: https://phelanspharmacy.com/.  While they are happy enough with it, the main problem which prevents them from leveraging it is that, Managing the Content just takes too long!  In consultation with the owner, we decided that we would undertake a two epic, four persona revamp.
 
-`python3 -m http.server`
+<details>
+<summary>Epics:</summary>
+ 
+- Epic 1: to replicate the site as is, not exactly, but enough to easily see the overlaps to appreciate the extra functionality provided in Epic 2.
+- Epic 2: to add CRUD to Prescription (PX) Management, Product Management, Service Management and Article Managment.  Epic 2 would enable to team in Phelans Pharmacy to keep the site updated without having to engage the services of a Developer.
+- Epic 3: Out of scope for this project, would be a Full Migration of all existing features in the current site and add a few more such as spcific reports to deal with increased PX and Product Orders
+</details>
 
-A blue button should appear to click: _Make Public_,
+<details>
+<summary>Personas:</summary>
 
-Another blue button should appear to click: _Open Browser_.
+- Persona 1: Site Owner (is_superuser with access to /Admin)
+- Persona 2: Team Member (is_staff Access to CRUD on the frontend)
+- Persona 3: Anonymous User (Access to view everything)
+- Persona 4: Registered User (Anonymous User with a Profile)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+</details>
 
-A blue button should appear to click: _Make Public_,
+</details>
 
-Another blue button should appear to click: _Open Browser_.
+## Deployment
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<details>
 
-To log into the Heroku toolbelt CLI:
+### Local Deployment  
+1. [Clone the repository from GitHub](https://github.com/DMASCoreDeclan/PP5-Pharmacy.git) by clicking the "Code" button and copying the URL.
+2. Open your preferred IDE and open a terminal session in the directory you want to clone the repository to.
+3. Type `git clone` followed by the URL you copied in step 1 and press enter.
+4. Install the required dependencies by typing `pip install -r requirements.txt` in the terminal.
+5. Note: The project is setup to use environment variables. You will need to set these up in your local environment. See [Environment Variables](env_sample.py) for more information.
+6. Connect your database of choice and run the migrations by typing `python manage.py migrate` in the terminal.
+7. Create a superuser by typing `python manage.py createsuperuser` in the terminal and following the prompts.  YOU MUST create a superuser called "Admin" to have the frontend features
+8. Optional: Load blog articles `python manage.py loaddata products/fixtures/categories.json` and `python manage.py loaddata products/fixtures/products.json`.
+9. Run the app by typing `python manage.py runserver` in the terminal and opening the URL in your browser.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Heroku Deployment
+1. Login to the Heroku dashboard and create a new app.
+2. Connect your GitHub repository to your Heroku app.
+3. In the Settings tab, ensure that the [Python Buildpack](_docs/heroku-config-vars.png) is added.  
+4. Set environment variables in the Config Vars section of the Settings tab, detailed below.
+5. In the Deploy tab, enable automatic deploys from your GitHub repository.
+6. Click the "Deploy Branch" button to deploy the app.
+7. Once the app has been deployed, click the "Open App" button to view the app.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+####  Environment Variables
+- For local deployment, you will need to create a `.env` file in the root directory of the project and set the environment variables in this file.
+- For Heroku deployment, you will need to set the environment variables through the Heroku CLI or through the Heroku dashboard under 'Config Vars'.  In addition, you will need an [AWS Account](https://eu-west-1.console.aws.amazon.com/s3/buckets?region=eu-west-1&bucketType=general&region=eu-west-1) to setup AWS Buckets, an [Email Account](https://support.google.com/mail/answer/56256?hl=en) for sending emails and a [Stripe Account](https://dashboard.stripe.com/apikeys) to connect to Stripe.  Setting up these Accounts and their components is beyond the scope of this README.  However should you have all of these accounts, you need to define the following variables:
+  - If using a Postgres database:
+    - `DATABASE_URL` - the URL for your Postgres database.
+    AWS Keys to be obtained from your account and poplated in Heroku
+    - `AWS_ACCESS_KEY_ID` - 
+    - `AWS_SECRET_ACCESS_KEY` -
+    - `USE_AWS` - 
+    - `AWS_STORAGE_BUCKET_NAME` - 
+    - `AWS_S3_REGION_NAME` - 
+    - `AWS_S3_CUSTOM_DOMAIN` - 
+    Email Keys to be obtained from your account and poplated in Heroku
+    - `EMAIL_HOST_PASS` - 
+    - `EMAIL_HOST_USER` - 
+    DJANGO Key to be obtained from settings.py of your project and poplated in Heroku
+    - `SECRET_KEY` - 
+    Stripe Keys to be obtained from your account and poplated in Heroku
+    - `STRIPE_PUBLIC_KEY` - 
+    - `STRIPE_PUBLIC_KEY_LIVE` - 
+    - `STRIPE_SECRET_KEY` - 
+    - `STRIPE_SECRET_KEY_LIVE` - 
+    - `STRIPE_WH_SECRET` - 
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+</details>
 
-**September 20 2023:** Update Python version to 3.9.17.
+<details>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**<summary>Credits</summary>**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Antonio, my mentor 
+- Code Institute for the foundation of Epic 1: "Boutique Ado!"
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+</details>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+**May 16, 2024**
