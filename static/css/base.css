@@ -338,6 +338,16 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* --------------------- Services Icons */
+.service-icon {
+    max-width: 67px;
+    max-height: 73px;
+    background-color: #fff;
+}
+
+.bg-white {
+    background-color: white;
+}
 
 /* -------------------------------- Media Queries */
 

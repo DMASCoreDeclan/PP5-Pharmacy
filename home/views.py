@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.template.defaultfilters import slugify
 
-from .models import CommunicationContent, CommunicationType, CommunicationStatus
+from .models import CommunicationContent, CommunicationType, CommunicationStatus, Service
+
 from .forms import CommunicationForm
 
 # Create your views here.
@@ -20,9 +21,10 @@ def subscribe(request):
     return render(request, 'home/subscribe.html')
 
 
+# Article Views
 def all_articles(request):
     """
-    View to display articles that
+    View to display Articles
     """
     articles = CommunicationContent.objects.all()
     # else:
@@ -187,4 +189,22 @@ def edit_articles(request):
     }
 
     return render(request, template, context)
-    
+
+
+# Service Views
+def all_services(request):
+    """
+    View to display Services that
+    """
+    services = Service.objects.all()
+    # else:
+    #     web_article = CommunicationContent.objects.all().filter(
+    #     status=2, content_type=2
+    #     )
+
+    template = 'home/all_services.html'
+    context = {
+        'services': services,
+    }
+
+    return render(request, template, context)

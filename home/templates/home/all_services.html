@@ -1,0 +1,131 @@
+{% extends base_template_name %}
+{% load static %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock page_header %}
+
+<title>{% block extra_title %} Healthcare Services {% endblock extra_title %}</title>
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        {% for service in services %}
+            <div class="card flex-row flex-wrap border-0 col-sm-5 col-md-3 col-lg-3 col-xl-2 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1">
+                <div class="card-header border-0 bg-white">
+                    <img src="{{MEDIA_URL}}{{ service.icon }}" class="service-icon" alt="an image of {{ service.title }}" />
+                </div>
+                <div class="card-block px-2">
+                    <h4 class="card-title">{{ service.title|safe }}</h4>
+                    {% if service.content|safe|wordcount > 5 %}
+                        <p class="card-text">{{ service.content|safe|truncatewords_html:5 }}</p>
+                        <p>
+                            <a href="#" class="btn btn-purple link-purple" role="button" title="Read more of {{ service.title }}">Read More</a>
+                        </p>
+                    {% else %}
+                        <p class="card-text">{{ service.content|safe }}</p>
+                    {% endif %}
+                    
+                </div>
+                <!-- <div class="w-100"></div>
+                <div class="card-footer w-100 text-muted">
+                </div> -->
+            </div>
+        {% endfor %}
+    <!-- </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                </div>
+            </div>
+            <div class="row">
+                {% for service in services %}
+                    {% if user.is_staff %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0 mx-2">
+                            <div class="card-body pb-0">
+                                <h5 class="text-center mb-0">{{ service.title }} by {{ service.author }}</h5>
+                            </div>
+                    {% else %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0 mx-2">
+                            <div class="card-body pb-0">
+                                <h5 class="text-center mb-0">{{ service.title }}</h5>
+                            </div>
+                    {% endif %}
+                        <img src="{{MEDIA_URL}}{{ service.image }}" class="card-img-top rounded-circle col-offset-2 web-card-img"
+                            alt="{{ service.title }} image">
+                        <div class="card-body pb-0">
+                            {% if service.content|safe|wordcount > 25 %}
+                                <p class="card-text">{{ service.content|safe|truncatewords_html:25 }}</p>
+                                <p>
+                                    <a href="#" class="btn btn-purple link-purple" role="button" title="Red more of {{ service }}"> Read More </a>
+                                </p>
+                            {% else %}
+                                <p class="card-text">{{ service.content|safe }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %} 
+                                {% endfor %}-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btt-button shadow-sm rounded-0 blorder border-purple">
+    <a href="" class="btt-link d-flex h-100">
+        <i class="fas fa fa-arrow-up text-purple mx-auto my-auto"></i>
+    </a>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+
+{% block postloadjs %}
+{% endblock postloadjs %}
+
+{% block extra_postloadjs %}
+{{ block.super }}
+    <script src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+{% endblock extra_postloadjs %}
