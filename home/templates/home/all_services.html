@@ -27,7 +27,7 @@
                     <h4 class="card-title">{{ service.title|safe }}</h4>
                     {% if service.content|safe|wordcount > 5 %}
                         <p class="card-text">{{ service.content|safe|truncatewords_html:5 }}</p>
-                        <p>
+                        <p class="mx-auto">
                             <a href="#" class="btn btn-purple link-purple" role="button" title="Read more of {{ service.title }}">Read More</a>
                         </p>
                     {% else %}

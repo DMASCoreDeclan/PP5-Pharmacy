@@ -75,7 +75,6 @@ class Service(models.Model):
     Model to select the status of the Communication Type
     of either Newssletter or Website
     """
-
     class Meta:
         verbose_name_plural = 'Services'
 

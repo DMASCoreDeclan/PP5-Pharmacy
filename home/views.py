@@ -5,7 +5,7 @@ from django.template.defaultfilters import slugify
 
 from .models import CommunicationContent, CommunicationType, CommunicationStatus, Service
 
-from .forms import CommunicationForm
+from .forms import CommunicationForm, ServiceForm
 
 # Create your views here.
 
@@ -27,10 +27,6 @@ def all_articles(request):
     View to display Articles
     """
     articles = CommunicationContent.objects.all()
-    # else:
-    #     web_article = CommunicationContent.objects.all().filter(
-    #     status=2, content_type=2
-    #     )
 
     template = 'home/all_articles.html'
     context = {
@@ -197,10 +193,6 @@ def all_services(request):
     View to display Services that
     """
     services = Service.objects.all()
-    # else:
-    #     web_article = CommunicationContent.objects.all().filter(
-    #     status=2, content_type=2
-    #     )
 
     template = 'home/all_services.html'
     context = {
@@ -208,3 +200,35 @@ def all_services(request):
     }
 
     return render(request, template, context)
+
+@login_required
+def add_service(request):
+    """
+    View to add articles that are of type WEBSITE_ARTICLE
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'Only members of the Store Team can do that')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, request.FILES)
+        if form.is_valid():
+            service = form.save(commit=False)
+            service.author = request.user
+            service.save()
+            messages.success(
+                request, 
+                f'{request.user}, you\'ve aded a new service!'
+                )
+            return redirect(reverse('all_services'))
+    else:
+        form = ServiceForm()
+
+    form = ServiceForm()
+    template = 'home/add_service.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
