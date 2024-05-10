@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import CommunicationType, CommunicationStatus, CommunicationContent, Service
+from .models import CommunicationType, CommunicationStatus
+from .models import CommunicationContent, Service
 from django_summernote.admin import SummernoteModelAdmin
+
 
 @admin.register(CommunicationStatus)
 class StatusAdmin(admin.ModelAdmin):
@@ -26,24 +28,24 @@ class CommunicationTypeAdmin(admin.ModelAdmin):
 @admin.register(CommunicationContent)
 class CommunicationContentAdmin(SummernoteModelAdmin):
     list_display = (
-        'status', 
+        'status',
         'author',
-        'short_description',  
-        'title', 
-        'slug', 
-        'created_on', 
-        'updated_on', 
-        'image', 
+        'short_description',
+        'title',
+        'slug',
+        'created_on',
+        'updated_on',
+        'image',
     )
 
     fields = (
-        'status', 
+        'status',
         'author',
-        'content_type',  
-        'title', 
-        'slug', 
-        'content', 
-        'image', 
+        'content_type',
+        'title',
+        'slug',
+        'content',
+        'image',
     )
     list_filter = ("content_type",)
     search_fields = ['title', 'content']
@@ -66,4 +68,3 @@ class ServiceAdmin(SummernoteModelAdmin):
         'content',
     )
     ordering = ('title',)
-

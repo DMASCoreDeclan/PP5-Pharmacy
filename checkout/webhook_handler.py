@@ -10,6 +10,7 @@ from profiles.models import UserProfile
 import json
 import time
 
+
 class StripeWH_Handler:
     """
     Handle Stripe webhooks
@@ -29,15 +30,14 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )   
+        )
 
-    
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -76,15 +76,19 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objexts.get(user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone,
-                profile.default_country = shipping_details.address.country,
-                profile.default_postcode = shipping_details.address.postal_code,
+                profile.default_phone_number = \
+                    shipping_details.phone,
+                profile.default_country = \
+                    shipping_details.address.country,
+                profile.default_postcode = \
+                    shipping_details.address.postal_code,
                 profile.default_town_or_city = shipping_details.address.city,
-                profile.default_street_address1 = shipping_details.address.line1,
-                profile.default_street_address2 = shipping_details.address.line2,
+                profile.default_street_address1 = \
+                    shipping_details.address.line1,
+                profile.default_street_address2 = \
+                    shipping_details.address.line2,
                 profile.default_county = shipping_details.address.state,
                 profile.save()
-
 
         order_exists = False
         attempt = 1
@@ -112,7 +116,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | \
+                SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -141,16 +146,16 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data[
-                            'items_by_size'
-                            ].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+                        for size, quantity \
+                                in item_data['items_by_size'].items():
+                            order_line_item =\
+                                OrderLineItem(
+                                        order=order,
+                                        product=product,
+                                        quantity=quantity,
+                                        product_size=size,
+                                        )
+                        order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()

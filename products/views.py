@@ -25,19 +25,22 @@ def all_products(request):
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
+
             sort = sortkey
+
             if sortkey == 'name':
-                sortkey ='lower_name'
+                sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+
             if sortkey == 'category':
                 sorkey = 'category__name'
-            
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
+
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -50,7 +53,8 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('all_products'))
             # icontain makes the contain case insensitive
-            queries= Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -87,7 +91,7 @@ def add_product(request):
         messages.error(request, 'Only members of the Store Team can do that')
         return redirect(reverse('home'))
 
-    if request.method =='POST':
+    if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
@@ -95,12 +99,12 @@ def add_product(request):
             return redirect(reverse('all_products'))
         else:
             messages.error(
-                request, 
+                request,
                 'Failed to add product. Please check the form is valid'
                 )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -138,7 +142,7 @@ def edit_product(request, product_id):
             return redirect(reverse('edit_products'))
         else:
             messages.error(
-                request, 
+                request,
                 'Failed to update product. Please ensure the form is valid.'
                 )
     else:
@@ -162,7 +166,7 @@ def delete_products(request):
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')
         return redirect(reverse('home'))
-        
+
     products = Product.objects.all()
 
     template = 'products/delete_products.html'
@@ -184,22 +188,26 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    context ={
-        'product': product, 
+    context = {
+        'product': product,
     }
 
     # Presents Delete Confirmation Product before deleting
     if request.method == 'GET':
-        return render(request, 'products/confirm_delete_product.html', context)
+        return render(
+            request,
+            'products/confirm_delete_product.html',
+            context
+            )
 
     # Delete Product after confirmation
     if request.method == 'POST':
-        product.delete() 
+        product.delete()
         messages.success(request, 'Successfully deleted product!')
         return redirect(reverse('all_products'))
     else:
         messages.error(
-            request, 
+            request,
             'Failed to delete product. Please ensure the form is valid.'
             )
 

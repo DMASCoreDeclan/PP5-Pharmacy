@@ -8,19 +8,24 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = (
-            'category', 
-            'brand', 
-            'name', 
-            'description', 
-            'has_sizes', 
-            'size', 
-            'price', 
-            'rating', 
-            'thumbnail', 
+            'category',
+            'brand',
+            'name',
+            'description',
+            'has_sizes',
+            'size',
+            'price',
+            'rating',
+            'thumbnail',
         )
 
-    thumbnail = forms.ImageField(label='Product Image', required=False, widget=CustomClearableFileInput)
-    rating = forms.DecimalField(label='Rating', required=False, widget=RatingInput)
+    thumbnail = forms.ImageField(label='Product Image',
+                                 required=False,
+                                 widget=CustomClearableFileInput)
+    rating = forms.DecimalField(
+        label='Rating',
+        required=False,
+        widget=RatingInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -30,5 +35,3 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-purple rounded-0'
-
-

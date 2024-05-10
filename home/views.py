@@ -3,11 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.template.defaultfilters import slugify
 
-from .models import CommunicationContent, CommunicationType, CommunicationStatus, Service
+from .models import CommunicationContent, CommunicationType
+from .models import CommunicationStatus, Service
 
 from .forms import CommunicationForm, ServiceForm
 
 # Create your views here.
+
 
 def index(request):
     ''' A view to return the index page'''
@@ -47,15 +49,15 @@ def add_article(request):
 
     if request.method == 'POST':
         form = CommunicationForm(request.POST, request.FILES)
-        type = CommunicationType.objects.all() # filter(name='website_article')
-        status = CommunicationStatus.objects.all() # filter(id=2)
+        type = CommunicationType.objects.all()
+        status = CommunicationStatus.objects.all()
         if form.is_valid():
             article = form.save(commit=False)
             article.slug = slugify(article.title)
             article.author = request.user
             article.save()
             messages.success(
-                request, 
+                request,
                 f'{request.user}, you\'ve aded a new article!'
                 )
             return redirect(reverse('all_articles'))
@@ -82,12 +84,12 @@ def edit_article(request, slug,):
 
     article = get_object_or_404(CommunicationContent, slug=slug)
     article_form = CommunicationForm(
-        request.POST, 
-        request.FILES, 
+        request.POST,
+        request.FILES,
         instance=article
         )
 
-    if request.method == 'POST': 
+    if request.method == 'POST':
         if article_form.is_valid():
             article.author = request.user
             article.slug = slugify(article.title)
@@ -96,7 +98,7 @@ def edit_article(request, slug,):
             return redirect(reverse('edit_articles'))
         else:
             messages.error(
-                request, 
+                request,
                 'Failed to update article. Please ensure the form is valid.'
                 )
     else:
@@ -135,9 +137,9 @@ def delete_article(request, slug):
         return redirect(reverse('all_articles'))
 
     article = get_object_or_404(CommunicationContent, slug=slug)
-    
-    context ={
-        'article': article, 
+
+    context = {
+        'article': article,
     }
 
     # Presents Delete Confirmation Article before deleting
@@ -146,12 +148,12 @@ def delete_article(request, slug):
 
     # Delete Article after confirmation
     if request.method == 'POST':
-        article.delete() 
+        article.delete()
         messages.success(request, 'Successfully deleted article!')
         return redirect(reverse('all_articles'))
     else:
         messages.error(
-            request, 
+            request,
             'Failed to delete article. Please ensure the form is valid.'
             )
         return redirect(reverse('delete_articles'))
@@ -165,7 +167,7 @@ def delete_articles(request):
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')
         return redirect(reverse('home'))
-        
+
     articles = CommunicationContent.objects.all()
 
     template = 'home/delete_articles.html'
@@ -201,6 +203,7 @@ def all_services(request):
 
     return render(request, template, context)
 
+
 @login_required
 def add_service(request):
     """
@@ -217,7 +220,7 @@ def add_service(request):
             service.author = request.user
             service.save()
             messages.success(
-                request, 
+                request,
                 f'{request.user}, you\'ve aded a new service!'
                 )
             return redirect(reverse('all_services'))
@@ -232,6 +235,7 @@ def add_service(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_service(request, service_id,):
     """
@@ -244,12 +248,12 @@ def edit_service(request, service_id,):
     service = get_object_or_404(Service, pk=service_id)
 
     service_form = ServiceForm(
-        request.POST, 
-        request.FILES, 
+        request.POST,
+        request.FILES,
         instance=service
         )
 
-    if request.method == 'POST': 
+    if request.method == 'POST':
         if service_form.is_valid():
             service.author = request.user
             service.save()
@@ -257,7 +261,7 @@ def edit_service(request, service_id,):
             return redirect(reverse('edit_services'))
         else:
             messages.error(
-                request, 
+                request,
                 'Failed to update service. Please ensure the form is valid.'
                 )
     else:
@@ -283,6 +287,7 @@ def edit_services(request):
 
     return render(request, template, context)
 
+
 def service_detail(request, service_id):
     """ A view to return a single article,
     including sorting and search queries """
@@ -295,6 +300,7 @@ def service_detail(request, service_id):
 
     return render(request, 'home/service_detail.html', context)
 
+
 @login_required
 def delete_services(request):
     """
@@ -303,7 +309,7 @@ def delete_services(request):
     if not request.user.is_staff:
         messages.error(request, 'Only members of the Store Team can do that')
         return redirect(reverse('home'))
-        
+
     services = Service.objects.all()
 
     template = 'home/delete_services.html'
@@ -312,6 +318,7 @@ def delete_services(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_service(request, service_id):
@@ -323,9 +330,9 @@ def delete_service(request, service_id):
         return redirect(reverse('all_services'))
 
     service = get_object_or_404(Service, pk=service_id)
-    
-    context ={
-        'service': service, 
+
+    context = {
+        'service': service,
     }
 
     # Presents Delete Confirmation Article before deleting
@@ -334,12 +341,12 @@ def delete_service(request, service_id):
 
     # Delete Article after confirmation
     if request.method == 'POST':
-        service.delete() 
+        service.delete()
         messages.success(request, 'Successfully deleted service!')
         return redirect(reverse('all_services'))
     else:
         messages.error(
-            request, 
+            request,
             'Failed to delete service. Please ensure the form is valid.'
             )
         return redirect(reverse('delete_services'))

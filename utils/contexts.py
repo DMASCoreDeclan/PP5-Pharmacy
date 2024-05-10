@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -38,9 +39,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,
@@ -53,10 +54,11 @@ def cart_contents(request):
 
     return context
 
-# https://stackoverflow.com/questions/43424628/django-change-base-template-based-on-user-authenticaton #noqa
+
+# https://stackoverflow.com/questions/43424628/django-change-base-template-based-on-user-authenticaton # noqa
 def base_template_name_context_processor(request):
     '''
-    Contet to determine which base template should be used, depending on 
+    Contet to determine which base template should be used, depending on
     whether the user is is_staff.  If the user is_staff, mgmt-base.html is used
     otherwise base.html is used
     '''
