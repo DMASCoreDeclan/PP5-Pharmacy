@@ -1,4 +1,4 @@
-![Phelans Pharmacy](_docs/phelans-logo-high-cropped.png)
+![Phelans Pharmacy](/workspace/PP5-Pharmacy/media/phelans-logo-high-cropped.png)
 
 Welcom to my PP5 Code Institute submission
 
