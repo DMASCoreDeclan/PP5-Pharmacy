@@ -11,3 +11,4 @@ cloudinary_python.txt
 debug.log   
 *.pyc
 zsettings.py
+.vscode/extensions.json
