@@ -54,12 +54,12 @@
                                             </a>  
                                         </td>
                                         <td>
-                                                {% for key, value in PX_STATUS.items %}
-                                                    {% if px.px_status|get_from_px_status == value %}
-                                                        {{ value }}
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </td>
+                                            {% for key, value in PX_STATUS.items %}
+                                                {% if px.px_status|get_from_px_status == value %}
+                                                    {{ value }}
+                                                {% endif %}
+                                            {% endfor %}
+                                        </td>
                                         <td> {{ px.px_delivery|get_from_px_delivery }}</td>
                                         <td> {{ px.full_name }}</td>
                                         <td> {{ px.email }}</td>

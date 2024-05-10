@@ -1,5 +1,4 @@
 {% if not product.get_product_list %}
-
     {% if product.thumbnail %}
         <a href="{% url 'edit_product' product.id %}" title="Edit {{ product }}">
             <img src="{{ MEDIA_URL }}{{ product.thumbnail }}" alt="An image showing {{ product.name }}" class="card-img-top img-fluid">
