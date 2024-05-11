@@ -43,8 +43,7 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'This is a past confirmation for {order_number}.  '
-        'A confirmation email was sent on that date'
+        f'This is a past confirmation for {order_number}.'
     ))
 
     template = 'checkout/checkout_success.html'
@@ -60,8 +59,7 @@ def px_order_history(request, px_order_number):
     px_order = get_object_or_404(Prescription, px_order_number=px_order_number)
 
     messages.info(request, (
-        f'This is a past confirmation for {px_order_number}.  '
-        'A confirmation email was sent on that date'
+        f'This is a past confirmation for {px_order_number}.'
     ))
 
     template = 'prescription/prescription_history.html'
@@ -89,8 +87,7 @@ def prescription_history(request, px_order_number):
             user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}.  A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is {order_number}.')
 
     template = 'prescription/prescription_history.html'
     context = {
