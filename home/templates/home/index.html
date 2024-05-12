@@ -15,15 +15,19 @@
 <title>{% block extra_title %}{{"Phelans | the Friendliest Pharmacy Wateford"}}{% endblock extra_title %}</title>
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container-fluid">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">    
+            <div class="offset-sm-2 col-sm-4 col-md-4 offset-lg-1 col-lg-3 my-auto">    
                 <h1 class="display-4 logo-font text-white">
                     Phelans Pharmacy: serving you!    
                 </h1>
                 <div class="my-5" >
                     <h4>
-                        <a href=" {% url 'order_px' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">Prescriptions</a>
+                        {% if user.is_staff %}
+                            <a href=" {% url 'px_admin' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">PX Admin</a>
+                        {% else %}
+                            <a href=" {% url 'order_px' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">Prescriptions</a>
+                        {% endif %}                        
                     </h4>
                 </div>
                 <div class="my-5" >
@@ -33,7 +37,11 @@
                 </div>
                 <div class="my-1" >
                     <h4>
-                        <a href=" {% url 'subscribe' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">Newsletter</a>
+                        {% if user.is_staff %}
+                            <a href="https://us22.admin.mailchimp.com/" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">Newsletter Admin</a>
+                            {% else %}
+                            <a href="{% url 'subscribe' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-4">Newsletter</a>
+                        {% endif %}   
                     </h4>
                 </div>
             </div>

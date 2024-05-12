@@ -89,6 +89,14 @@
                             <p class="small mb-0">{{ px_order.dr_full_name }}</p>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-7 text-right">
+                        {% if from_profile %}
+                            <a href="{% url 'profile' %}" class="btn btn-purple rounded-0 my-2">
+                                <span class="icon mr-2"><i class="fas fa-angle-left"></i></span>
+                                <span class="text-uppercase">Back to Profile</span>
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
