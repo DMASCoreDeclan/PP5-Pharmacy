@@ -7,6 +7,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 
+import stripe
 import json
 import time
 
@@ -51,7 +52,6 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
-        print(intent)
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
@@ -60,9 +60,9 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
-        billing_details = intent.charges.data[0].billing_details
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        grand_total = round(stripe_charge.amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
