@@ -35,8 +35,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe  https://docs.stripe.com/payments/without-card-authentication -->
         <script src="https://js.stripe.com/v3/"></script>
-        <!-- Stripe  https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html -->
-        <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
         {% endblock corejs %}
 
         {% block extra_js %}
@@ -128,7 +126,7 @@
             {% if not user.is_staff %}
                 <div id="delivery-banner" class="row text-center">
                     <div class="col bg-purple text-white d-sm-block">
-                        <h4 class="logo-font my-1">Free Delivery  on orders over €{{ free_delivery_threshold }}!</h4>
+                        <h4 class="logo-font my-1 d-none d-sm-block">Free Delivery  on orders over €{{ free_delivery_threshold }}!</h4>
                     </div>
                 </div>
             {% endif %}

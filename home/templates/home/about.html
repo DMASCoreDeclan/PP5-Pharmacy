@@ -1,0 +1,55 @@
+{% extends base_template_name %}
+
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock page_header %}
+
+<title>{% block extra_title %}{{"About Phelans | the Friendliest Pharmacy Wateford"}}{% endblock extra_title %}</title>
+
+{% block content %}
+<div class="overlay"></div>
+<div class="about-card">
+    <h1 class="display-4 logo-font text-center my-3">About</h1>
+    <img class="card-img-top" src="{{MEDIA_URL}}about-header.jpg" alt="Phelans Team">
+</div>
+<div class="team-card offset-2 col-8">
+    <h1 class="display-4 logo-font text-center mt-5 mb-3">Meet the Team</h1>
+    <img class="card-img-top mb-5" src="{{MEDIA_URL}}phelans-pharmacy-team.jpg" alt="Phelans Team">
+</div>
+<div class="row justify-content-md-cente">
+    <div class="offset-sm-1 col-sm-5">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2 class="card-title text-center">History</h2>
+                <p class="card-text">Phelans pharmacy has been in existence for almost 100 years. Originally founded by Sylvie Phelan, the business was then taken over  by Dick Phelan and years later Dick was succeeded by his son Richard. The business was subsequently taken over in July 2016 by Brian Tynan. Many people will be familiar with Brian from his former fortnightly pharmacy slot on the Deise AM show on WLR.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2 class="card-title text-center">Our Ethos</h2>
+                <p class="card-text">In Phelan’s Pharmacy healthcare is personal. Phelan’s staff are renowned for attending patients’ every need with confidence, understanding and empathy. Central to this is our ability to carefully listen and understand, thereby providing the best care and attention.</p>
+                <a href="{% url 'all_services' %}" class="btn btn-purple">Our Services</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include 'includes/purple-footer.html' %}
+{% endblock footer %}
+
+{% block extra_postloadjs %}
+{% endblock extra_postloadjs %}

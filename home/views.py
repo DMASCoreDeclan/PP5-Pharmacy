@@ -23,7 +23,6 @@ def subscribe(request):
     return render(request, 'home/subscribe.html')
 
 
-# Article Views
 def all_articles(request):
     """
     View to display Articles
@@ -189,7 +188,6 @@ def edit_articles(request):
     return render(request, template, context)
 
 
-# Service Views
 def all_services(request):
     """
     View to display Services that
@@ -350,3 +348,10 @@ def delete_service(request, service_id):
             'Failed to delete service. Please ensure the form is valid.'
             )
         return redirect(reverse('delete_services'))
+
+
+def about(request):
+    '''
+    A view to return the about page
+    '''
+    return render(request, 'home/about.html')

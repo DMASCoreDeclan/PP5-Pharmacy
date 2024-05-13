@@ -158,13 +158,14 @@ body {
     z-index: -1;
 }
 
-/* body {
-    background: url('https://phelans-pharmacy.s3.eu-west-1.amazonaws.com/media/about-header.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 264px);
-    color: #744380;
-    font-family: 'Lato';
-} */
+/* ----------------------------------------------- ABOUT */
+.about-card {
+    width: 100%;
+} 
+
+.team-card {
+    width: 100%;
+} 
 
 a.category-badge > span.badge:hover {
     background-color: #fff !important;
