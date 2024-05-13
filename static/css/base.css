@@ -147,6 +147,25 @@ body {
     z-index: -1;
 }
 
+.about-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    background: url('https://phelans-pharmacy.s3.eu-west-1.amazonaws.com/media/about-header.jpg') no-repeat center center fixed;
+    z-index: -1;
+}
+
+/* body {
+    background: url('https://phelans-pharmacy.s3.eu-west-1.amazonaws.com/media/about-header.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 264px);
+    color: #744380;
+    font-family: 'Lato';
+} */
+
 a.category-badge > span.badge:hover {
     background-color: #fff !important;
     /* color: rgba(0, 0, 0, .7); */

@@ -14,11 +14,8 @@ from utils.contexts import cart_contents
 # from django.core.mail import send_mail
 # from django.template.loader import render_to_string
 
-
-
 import stripe
 import json
-
 
 # def _send_confirmation_email(self, order):
 #         """
@@ -82,12 +79,11 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(cart)
             order.save()
-            
+
             # try:
             #     _send_confirmation_email(order)
             # except EXCEPTION as e:
             #     print(e)
-                
 
             for item_id, item_data in cart.items():
                 try:
