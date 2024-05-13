@@ -33,9 +33,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY", '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu112.gitpod.io', 
+    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu112.gitpod.io',
     '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu110.gitpod.io',
-    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu111.gitpod.io', 
+    '8000-dmascoredec-pp5pharmacy-hlqf2lekwm8.ws-eu111.gitpod.io',
     'phelans-pharmacy-bf69b3045245.herokuapp.com',
 ]
 
@@ -55,14 +55,14 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
-    'profiles', 
-    'prescription', 
+    'profiles',
+    'prescription',
 
     # Other
     'storages',
     'crispy_forms',
     'django_summernote',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -178,7 +178,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Stripe 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 
@@ -187,6 +187,9 @@ STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 DEFAULT_FROM_EMAIL = 'phelanspharmacy@example.com'
+print(STRIPE_WH_SECRET)
+print(STRIPE_SECRET_KEY)
+print(STRIPE_PUBLIC_KEY)
 
 if 'USE_AWS' in os.environ:
     # Cache control
@@ -194,7 +197,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
@@ -243,27 +246,5 @@ SUMMERNOTE_CONFIG = {
     'colorsName': [
       ['PhelansWhite', 'PhelansPurple', ],
     ],
-    },
-}
-
-
-# Loggong capability
-# https://docs.djangoproject.com/en/5.0/topics/logging/#s-configuring-logging
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "file": {
-            "level": "DEBUG",
-            "class": "logging.FileHandler",
-            "filename": "debug.log",
-        },
-    },
-    "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "INFO",
-            "propagate": True,
-        },
     },
 }

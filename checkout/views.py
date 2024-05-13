@@ -11,8 +11,33 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from utils.contexts import cart_contents
 
+# from django.core.mail import send_mail
+# from django.template.loader import render_to_string
+
+
+
 import stripe
 import json
+
+
+# def _send_confirmation_email(self, order):
+#         """
+#         Send the user a confirmation email
+#         """
+#         cust_email = order.email
+#         subject = render_to_string(
+#             'checkout/confirmation_emails/confirmation_email_subject.txt',
+#             {'order': order})
+#         body = render_to_string(
+#             'checkout/confirmation_emails/confirmation_email_body.txt',
+#             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+#         send_mail(
+#             subject,
+#             body,
+#             settings.DEFAULT_FROM_EMAIL,
+#             [cust_email]
+#         )
 
 
 @require_POST
@@ -57,6 +82,13 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(cart)
             order.save()
+            
+            # try:
+            #     _send_confirmation_email(order)
+            # except EXCEPTION as e:
+            #     print(e)
+                
+
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -77,6 +109,7 @@ def checkout(request):
                                 product_size=size,
                             )
                             order_line_item.save()
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your cart wasn't \
