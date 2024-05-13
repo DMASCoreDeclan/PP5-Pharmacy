@@ -28,6 +28,9 @@
                     {% if user.is_staff %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0 mx-2">
+                            <p>
+                                <a href="{% url 'edit_article' article.slug %}" class="btn btn-warning link-purple" role="button" title="Edit {{ article.slug }}">Edit</a>
+                            </p>
                             <div class="card-body pb-0">
                                 <h5 class="text-center mb-0">{{ article.title }} ({{ article.status }} by {{ article.author }} )</h5>
                             </div>
@@ -46,9 +49,6 @@
                             {% else %}
                                 <p class="card-text">{{ article.content|safe }}</p>
                             {% endif %}
-                            <p>
-                                <a href="{% url 'edit_article' article.slug %}" class="btn btn-purple link-purple" role="button" title="Edit {{ article.slug }}">Edit</a>
-                            </p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">

@@ -44,6 +44,9 @@ content="{{ product.brand }}">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
+                        <p>
+                            <a href="{% url 'edit_product' product.id %}" class="btn btn-warning" role="button" title="Edit {{ product }}"> Edit </a>
+                        </p>
                         <a href="{% url 'edit_product' product.id %}" title="Edit {{ product }}">
                             {% include 'products/includes/edit_product_bundle_picture.html' %}
                         </a>
@@ -73,9 +76,6 @@ content="{{ product.brand }}">
                                             <small class="text-muted">No Rating</small>
                                         </a>    
                                     {% endif %}
-                                    <p>
-                                        <a href="{% url 'edit_product' product.id %}" class="btn btn-warning" role="button" title="Edit {{ product }}"> Edit </a>
-                                    </p>
                                 </div>
                             </div>
                         </div>
