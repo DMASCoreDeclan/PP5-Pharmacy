@@ -33,17 +33,7 @@ stripe==5.4.0
 touch==2020.12.3
 urllib3==1.26.15
 values==2020.12.3
-
-
-
-
-
-
-
-
-
-
-
+django-summernote==0.8.20.0
 
 
 # asgiref==3.7.2
