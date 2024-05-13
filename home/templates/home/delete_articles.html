@@ -40,7 +40,7 @@
                     </div>
                     <div class="card-body pb-0 mx-auto">
                         <p class="mb-0"><strong>Article Title: </strong>{{ article.title }}</p>
-                        <p class="mb-0"><strong>Image: </strong><img src="{{MEDIA_URL}}{{ article.image }}" alt="{{ article.image }}"></p>
+                        <p class="mb-0"><strong>Image: </strong><img class="img-fluid" src="{{MEDIA_URL}}{{ article.image }}" alt="{{ article.image }}"></p>
                         <p class="mb-0"><strong>Content: </strong>{{ article.content }}</p>
                         <p class="mb-0"><strong>Written by: </strong>{{ article.author }}</p>
                         <p class="mb-0"><strong>Article Status: </strong>{{ article.status }}</p>
