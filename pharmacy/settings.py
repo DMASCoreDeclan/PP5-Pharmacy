@@ -91,7 +91,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth # noqa
                 'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -182,7 +182,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 
-STRIPE_CURRENCY ='eur'
+STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
@@ -233,18 +233,17 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 # Summernote Default settings:
-# https://github.com/summernote/summernote/blob/c223b08a20c1d8cbe20fb5ba213d617b83c4999f/src/js/base/settings.js#L152
+# https://github.com/summernote/summernote/blob/c223b08a20c1d8cbe20fb5ba213d617b83c4999f/src/js/base/settings.js#L152 # noqa
 SUMMERNOTE_CONFIG = {
     'summernote': {
         'fontSizes': ['8', '9', '10', '11', '12', '14', '16', '18', '24', '36'],
         'fontNames': ['Lato', ],
         'fontNamesIgnoreCheck': ['Spectral', 'Quicksand'],
         'colors': [
-      ['#FFFFFF', '#744380', ],
-    ],
-
-    'colorsName': [
-      ['PhelansWhite', 'PhelansPurple', ],
-    ],
-    },
+            ['#FFFFFF', '#744380', ],
+            ],
+        'colorsName': [
+            ['PhelansWhite', 'PhelansPurple', ],
+            ],
+        },
 }
