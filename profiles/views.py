@@ -39,6 +39,7 @@ def profiles(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -55,6 +56,7 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+@login_required
 def px_order_history(request, px_order_number):
     px_order = get_object_or_404(Prescription, px_order_number=px_order_number)
 
@@ -71,6 +73,7 @@ def px_order_history(request, px_order_number):
     return render(request, template, context)
 
 
+@login_required
 def prescription_history(request, px_order_number):
     """
     displays the PX submitted

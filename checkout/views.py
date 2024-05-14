@@ -17,26 +17,6 @@ from utils.contexts import cart_contents
 import stripe
 import json
 
-# def _send_confirmation_email(self, order):
-#         """
-#         Send the user a confirmation email
-#         """
-#         cust_email = order.email
-#         subject = render_to_string(
-#             'checkout/confirmation_emails/confirmation_email_subject.txt',
-#             {'order': order})
-#         body = render_to_string(
-#             'checkout/confirmation_emails/confirmation_email_body.txt',
-#             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-
-#         send_mail(
-#             subject,
-#             body,
-#             settings.DEFAULT_FROM_EMAIL,
-#             [cust_email]
-#         )
-
-
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -79,11 +59,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(cart)
             order.save()
-
-            # try:
-            #     _send_confirmation_email(order)
-            # except EXCEPTION as e:
-            #     print(e)
 
             for item_id, item_data in cart.items():
                 try:
