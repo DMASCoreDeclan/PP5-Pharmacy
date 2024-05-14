@@ -325,10 +325,138 @@ There are six apps within the project:
 </details>
 
   
+## Testing
+
+
+<details>
+
+<summary>Test Case and Test Scenario</summary>
+
+- All testing is manual.
+- All testing took place on the deployed site in an incognito Chrome window.  A random selection of the tests were also carried out in Firefox and MS Edge to check the console.
+- I logged into every URL and every Form as a UX, RUX, TUX and AUX.  After each action, I checked the console, and where appropriate, I checked the databae in /admin, to ensure the backend did as expected.  
+- I performed 64 [Unit Tests and Scenario Tests](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/_docs/TESTING_REPORT.md) 
+- During the testing
+	1. **Easy** to fix, misspellings or obvious omissions, in .html/.py/.js/.css.  These fixed on the fly and captured in a commit
+	1. **Substantial** and may or may not be fixed.  These have a [Bug Issue in Github](https://github.com/users/DMASCoreDeclan/projects/23/views/9?filterQuery=bug&sliceBy%5BcolumnId%5D=Status)
+
+</details>
+
+<details>
+
+<summary>Responsiveness</summary>
+
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, iPhone 11, iPad, and Androids to ensure responsiveness on various screen sizes. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
+- Unfortunately, it seems that [AmIResponsive](https://ui.dev/amiresponsive?url=https://phelans-pharmacy-bf69b3045245.herokuapp.com/) and [Responsinator](http://www.responsinator.com/) can no longer check Heroku hosted apps.  
+- Both sites yield the following Console Error: "chromewebdata/:1 Refused to display 'https://phelans-pharmacy-bf69b3045245.herokuapp.com/' in a frame because it set 'X-Frame-Options' to 'deny'."
+
+</details>
+
+<details>
+
+<summary>Code CI Python Linter</summary>
+
+[CI Python Linter](https://pep8ci.herokuapp.com/) showed several errors which have been remedied in [Commit 192](https://github.com/DMASCoreDeclan/PP5-Pharmacy/commit/1e14b7d6f93c62d667c7e2123326ddbf542c598e)
+</details>
+
+</details>
+
+<details>
+
+<summary>W3C CSS Validator Result</summary>
+No errors were returned when passing through the official W3C CSS Validator
+
+[W3C CSS Validator Result](https://jigsaw.w3.org/css-validator/validator?uri=https://phelans-pharmacy-bf69b3045245.herokuapp.com/)
+</details>
+
+</details>
+
+<details>
+
+<summary>W3C Markup Validator</summary>
+Positive validation from Nu Html Checker
+[]()
+
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+
+
+</details>
+
+</details>
 
 
 
+## SEO
 
+<details>
+
+<summary>Phelans Pharmacy Keyword Research</summary>
+
+  <details>
+  <summary>SEO High Level Strategy</summary>
+  
+ - Mention Waterford City, Waterford, Ireland
+ - A Weekly Change – Edit/Add/Remove Product, Edit/Add/Remove Article, Add Newsletter
+ - Link to Irish Pharmacy Page, Pharmacy Advertising Guidelines, Owners LinkedIn.  LinkedIn to Phelans Pharmacy, Social Media
+ - In Products, link to product Brand and the Product name.  Have an Article on the Brands you stock, 
+ - In Product Detail place the Brand Name and Product Name in the TITLE
+ - BOLD Brand Names
+ - Make sure product details have title=”” and alt=”” wherever possible
+ - Make the UX and content appealing to a human Google Rater
+
+  </details>
+
+  <details>
+  <summary>Keyword Strategy</summary>
+  
+- The site is bound by the Pharmaceutical Advertising Laws and Regulations Ireland  In essence, we can only advertise our non medical products, services and our ability to delivery any service ie we are friendly.
+- Social Media, Newsletters and Blog Articles would be the best.
+- Our customers are not online social media users for Medicines, only for gifts and other non medical products and services.
+- However, announcing a new service or the availability of a service should be marketed.  For example, a campaign saying “Latest Flu vaccine appointments are available from 25/10/5/today time, book your appointment here . . .” would be allowed
+- We want to rank highly for anything that we sell within a 15 mile radius.  
+- We do not deliver non medical products, we DO deliver medical products.  
+- All our services are consumed within the confines of the premises.  Our products are available either at a competing pharmacy or in the case of non medical products, in supermarkets.  There is nothing distinguishable about what we sell EXCEPT HOW we deliver it – Service.  
+- We want to distinguish ourselves from our competitors, who are bound by the same constraints by:
+ 
+  •	Being the preferred provider of services to be consumed on site
+  
+  •	Converting first time service customers to repeat medical product customers
+
+![Keyword Research](_docs/keyword.png)
+
+
+  </details>
+  <details>
+  <summary>Implementation</summary>
+  
+  •	Strategic use of semantics without keyword stuffing:
+
+  •	Articles and Product should be in bold H1s with < title > and < alt > being populated.
+
+  •	Articles, Services and Products should have keyword decriptions URLs (Use Slugs instead of PKs/IDs)
+
+  •	URLS to Images: descriptive-image-names.jpg.  (Using and image description in the model would have been more useful)
+
+  •	Apply ARIA rules where possible
+
+  •	META Data in < head >: < title >, < description > and < keywords > (Keywords should be stuffed)
+
+  </details>
+
+
+</details>
 
 
 ## Deployment
