@@ -29,7 +29,8 @@
 <summary>Overview</summary>
 
 - This Django web development project is an extension of Code Institute, "Boutique Ado". 
-- Phelans pharmacy already have a website: https://phelanspharmacy.com/.  While they are happy enough with it, the main problem which prevents them from leveraging it is that, Managing the Content just takes too long! In consultation with the owner, we decided that we would undertake a two epic, four persona revamp.
+- Phelans pharmacy, an independently owned pharmacy in Waterford, already have a website: https://phelanspharmacy.com/.  While they are happy enough with it as a source of information, the main problem which prevents them from leveraging it is that, Managing the Content just takes too long! In consultation with the owner, we decided that we would undertake a two epic, four persona revamp.
+ - The overall objective is to develop the existing web-site to enable e-commerce functionality, allowing customers (users) to securely login, create a profile, select products to place in their cart, upload prescriptions, and make secure payments. In addition to being secure, the web-site will be user-friendly, conforming to the highest UX standards.  
 
 
 <details>
@@ -44,13 +45,7 @@
 <summary>Personas:</summary>
 
 - Persona 1: Site Owner AUX (is_superuser with access to /Admin)
-
-  ![AUX Credentials](_docs/aux-credentials.png)
-
 - Persona 2: Team Member TUX (is_staff Access to CRUD on the frontend)
-
-  ![TUX Credentials](_docs/tux-credentials.png)
-
 - Persona 3: Registered User RUX (Anonymous User with a Profile)
 - Persona 4: Anonymous User UX (Access to view everything)
 

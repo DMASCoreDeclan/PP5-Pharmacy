@@ -12,7 +12,7 @@ Previous orders are displayed in MY PROFILE of the logged in RUX.
 
 Lighthouse was performed on PRESCRIPTION and it yielded the following results:
 
-![Lighthouse Results](lighthouse-prescription.png)
+![Lighthouse Results](/prescription/_docs/lighthouse-prescription.png)
 
 [CI Python Linter](https://pep8ci.herokuapp.com/) showed several errors which have been remedied in [Commit 192](https://github.com/DMASCoreDeclan/PP5-Pharmacy/commit/1e14b7d6f93c62d667c7e2123326ddbf542c598e)
 
