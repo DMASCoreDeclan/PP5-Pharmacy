@@ -92,6 +92,7 @@ Any vistor who has the URL can see the home screen [Phelans | the Friendliest Ph
   [TUX Home Screen](https://phelans-pharmacy-bf69b3045245.herokuapp.com/)
   
   <img src="home/_docs/home.png">
+
   </details>
 
   <details>
@@ -375,24 +376,284 @@ No errors were returned when passing through the official W3C CSS Validator
 
 <summary>W3C Markup Validator</summary>
 Positive validation from Nu Html Checker
-[]()
 
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
+[About](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fabout%2F#l1c81694)
+
+[Add a Product](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fadd%2F#l1c81694)
+
+[Add Article](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fadd_article%2F#l1c81694)
+
+[Add Service](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fadd_service%2F)
+
+[Cartview](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fcartview%2F#l303c12)
+
+[Delete a Products](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fdelete_products%2F#l1c81694)
+
+[Delete an Article](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fdelete_articles%2F)
+
+[Delete a Service](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fdelete_services%2F)
+
+[Delete Article Hairy-Mary](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fdelete_article%2Fhairy-mary)
+
+[Delete Product 41](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fdelete_product%2F41%2F#l1c81694)
+
+[Delete Service 4](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fdelete_service%2F4)
+
+[Edit Article Hairy-Mary](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fedit_article%2Fhairy#l1c81694)
+
+[Edit Articles](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fedit_article%2F#l1c81694)
+
+[Edit Product 42](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fedit%2F42%2F#l1c81694)
+
+[Edit Products](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fedit_products%2F#l1c81694)
+
+[Edit Service 4](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fedit_service%2F4)
+
+[Edit Services](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fedit_services%2F)
+
+[Home](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2F#l303c12)
+
+[Login](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Fprescription%2F#l303c12)
+
+[Logout](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Faccounts%2Flogout%2F#l1c81694)
+
+[My Profile](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fprofile%2F#l1c81694)
+
+[Order Prescription](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fprescription%2F#l1c81694)
+
+[Register](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Faccounts%2Fsignup%2F#l303c12)
+
+[Subscibe to Newsletter](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fsubscribe%2F#l303c12)
+
+[View Articles](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fall_articles%2F#l1c81694)
+
+[View Products](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2F#l303c12)
+
+[View Products (Category Cosmetics)](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2F%3Fcategory%3Dcosmetics#l303c12)
+
+[View Products (sorted by price low -> high)](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2F%3Fsort%3Dprice%26direction%3Dasc#l303c12)
+
+[View Products 42](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2F42%2F#l303c12)
+
+[View Service 1](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fservice_detail%2F1#l303c12)
+
+[View Services](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fall_services%2F#l303c12)
+
+</details>
+
+<details>
+
+<summary>Lighthouse</summary>
+
+[SEO - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/50) is linked to each item below where it applies
+
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48) is linked to each item below where it applies
+
+[Accessibility will be fixed in Epic 3 - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/49) is linked to each item below where it applies
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36) is linked to each item below where it applies
+
+
+
+
+
+<details>
+<summary>lighthouse-about</summary>
+
+<img src="_docs/lighthouse-about.png">
+</details>
+<details>
+<summary>lighthouse-add-a-product</summary>
+
+<img src="products/_docs/lighthouse-add-a-product.png">
+</details>
+<details>
+<summary>lighthouse-add-article</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+<img src="_docs/lighthouse-add-article.png">
+</details>
+<details>
+<summary>lighthouse-add-service</summary>
+
+<img src="_docs/lighthouse-add-service.png">
+</details>
+<details>
+<summary>lighthouse-cartview</summary>
+
+<img src="cart/_docs/lighthouse-cartview.png">
+</details>
+<details>
+<summary>lighthouse-delete-a-products</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+<img src="products/_docs/lighthouse-delete-a-products.png">
+</details>
+<details>
+<summary>lighthouse-delete-an-article</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48)
+
+
+<img src="_docs/lighthouse-delete-an-article.png">
+</details>
+<details>
+<summary>lighthouse-delete-a-service</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48)
+
+
+<img src="_docs/lighthouse-delete-a-service.png">
+</details>
+<details>
+<summary>lighthouse-delete-article-hairy-mary</summary>
+
+<img src="_docs/lighthouse-delete-article-hairy-mary.png">
+</details>
+<details>
+<summary>lighthouse-delete-product-41</summary>
+
+<img src="products/_docs/lighthouse-delete-product-41.png">
+</details>
+<details>
+<summary>lighthouse-delete-service-4</summary>
+
+<img src="_docs/lighthouse-delete-service-4.png">
+</details>
+<details>
+<summary>lighthouse-edit-article-hairy-mary</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+<img src="_docs/lighthouse-edit-article-hairy-mary.png">
+</details>
+<details>
+<summary>lighthouse-edit-articles</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+<img src="_docs/lighthouse-edit-articles.png">
+</details>
+<details>
+<summary>lighthouse-edit-product-42</summary>
+
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48)
+
+[Accessibility will be fixed in Epic 3 - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/49)
+
+<img src="products/_docs/lighthouse-edit-product-42.png">
 
 
 </details>
+<details>
+<summary>lighthouse-edit-products</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+
+<img src="products/_docs/lighthouse-edit-products.png">
+</details>
+<details>
+<summary>lighthouse-edit-service-4</summary>
+
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48)
+
+[Accessibility will be fixed in Epic 3 - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/49)
+
+
+<img src="_docs/lighthouse-edit-service-4.png">
+</details>
+<details>
+<summary>lighthouse-edit-services</summary>
+
+[SEO won't be fixed - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/48)
+
+
+<img src="_docs/lighthouse-edit-services.png">
+</details>
+<details>
+<summary>lighthouse-home</summary>
+
+<img src="_docs/lighthouse-home.png">
+</details>
+<details>
+<summary>lighthouse-prescription</summary>
+
+<img src="prescription/_docs/lighthouse-prescription.png">
+</details>
+<details>
+<summary>lighthouse-logout</summary>
+
+<img src="_docs/lighthouse-logout.png">
+</details>
+<details>
+<summary>lighthouse-my-profile</summary>
+
+<img src="profiles/_docs/lighthouse-my-profile.png">
+</details>
+<details>
+<summary>lighthouse-register</summary>
+
+<img src="_docs/lighthouse-register.png">
+</details>
+<details>
+<summary>lighthouse-subscibe-to-newsletter</summary>
+
+<img src="_docs/lighthouse-subscibe-to-newsletter.png">
+</details>
+<details>
+<summary>lighthouse-view-articles</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+
+[SEO - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/50)
+
+<img src="_docs/lighthouse-view-articles.png">
+</details>
+<details>
+<summary>lighthouse-view-products</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+
+<img src="products/_docs/lighthouse-view-products.png">
+</details>
+<details>
+<summary>lighthouse-view-products-(category-cosmetics)</summary>
+
+<img src="products/_docs/lighthouse-view-products-(category-cosmetics).png">
+</details>
+<details>
+<summary>lighthouse-view-products-(sorted-by-price-low-->-high)</summary>
+
+[Performance Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/36)
+
+
+<img src="products/_docs/lighthouse-view-products-(sorted-by-price-low-->-high).png">
+</details>
+<details>
+<summary>lighthouse-view-products-42</summary>
+
+<img src="products/_docs/lighthouse-view-products-42.png">
+</details>
+<details>
+<summary>lighthouse-view-service-1</summary>
+
+<img src="_docs/lighthouse-view-service-1.png">
+</details>
+<details>
+<summary>lighthouse-view-services</summary>
+
+[SEO - Investigation](https://github.com/DMASCoreDeclan/PP5-Pharmacy/issues/50)
+
+<img src="_docs/lighthouse-view-services.png">
+</details>
+
 
 </details>
 
@@ -511,8 +772,10 @@ Positive validation from Nu Html Checker
 6. Click the "Deploy Branch" button to deploy the app.
 7. Once the app has been deployed, click the "Open App" button to view the app.
 
-
-
+### Database
+1. This app has been designed on sqlite which comes installed with django.  
+2. PRD deployment would require a publically hosted DB.  The PRD version has been tested with PostgreSQL and deployed with [Code Institute](https://dbs.ci-dbs.net/).  
+3. You can use any public PostgresSQL provider that has version 13 or above, such as [ElephantSQL](https://www.elephantsql.com/)
 
 ###  Environment Variables
 - For local deployment, you will need to create a `.env` file in the root directory of the project and set the environment variables in this file. [sample env](_docs/env_sample.py)
