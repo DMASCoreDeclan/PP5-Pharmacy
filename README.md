@@ -40,9 +40,9 @@
 
  - [CART README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/cart/_docs/README.md)
  - [CHECKOUT README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/checkout/_docs/README.md)
- - [HOME README]()
+ - [HOME README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/home/_docs/README.md)
  - [PHARMACY README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/README.md)
- - [PRESCRIPTION README]()
+ - [PRESCRIPTION README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/prescription/_docs/README.md)
  - [PRODUCTS README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/products/_docs/README.md)
  - [PROFILES README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/profiles/_docs/README.md)
 
@@ -671,8 +671,8 @@ Positive validation from Nu Html Checker
  - Mention Waterford City, Waterford, Ireland
  - A Weekly Change – Edit/Add/Remove Product, Edit/Add/Remove Article, Add Newsletter
  - Link to Irish Pharmacy Page, Pharmacy Advertising Guidelines, Owners LinkedIn.  LinkedIn to Phelans Pharmacy, Social Media
- - In Products, link to product Brand and the Product name.  Have an Article on the Brands you stock, 
- - In Product Detail place the Brand Name and Product Name in the TITLE
+ - In Products/Services/Articles links to product Brand and the Product name.  Have an Article on the Brands you stock, 
+ - In Products/Services/Articles detail place the Brand Name and Products/Services/Articles Name in the TITLE
  - BOLD Brand Names
  - Make sure product details have title=”” and alt=”” wherever possible
  - Make the UX and content appealing to a human Google Rater
