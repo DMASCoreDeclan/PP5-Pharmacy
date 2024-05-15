@@ -459,6 +459,34 @@ Positive validation from Nu Html Checker
 </details>
 
 
+## Facebook
+
+<details>
+
+<summary>Facebook</summary>
+
+  <details>
+
+  <summary>Facebook Original</summary>
+  
+  •	[Original Page - from Phelans Pharmacy](https://www.facebook.com/phelanspharmacywaterford/)
+
+  </details>
+
+  <details>
+  
+  <summary>Facebook Replica</summary>
+
+  •	[Replica Page - from Phelans Pharmacy](https://www.facebook.com/profile.php?id=61558063517842)
+  
+  ![Replica Page - for Phelans Pharmacy](_docs/facebook-replica.png)
+
+  </details>
+
+
+</details>
+
+
 ## Deployment
 
 <details>
@@ -487,28 +515,26 @@ Positive validation from Nu Html Checker
 
 
 ###  Environment Variables
-- For local deployment, you will need to create a `.env` file in the root directory of the project and set the environment variables in this file.
+- For local deployment, you will need to create a `.env` file in the root directory of the project and set the environment variables in this file. [sample env](_docs/env_sample.py)
 - For Heroku deployment, you will need to set the environment variables through the Heroku CLI or through the Heroku dashboard under 'Config Vars'.  In addition, you will need an [AWS Account](https://eu-west-1.console.aws.amazon.com/s3/buckets?region=eu-west-1&bucketType=general&region=eu-west-1) to setup AWS Buckets, an [Email Account](https://support.google.com/mail/answer/56256?hl=en) for sending emails and a [Stripe Account](https://dashboard.stripe.com/apikeys) to connect to Stripe.  Setting up these Accounts and their components is beyond the scope of this README.  However should you have all of these accounts, you need to define the following variables:
   - If using a Postgres database:
     - `DATABASE_URL` - the URL for your Postgres database.
-    AWS Keys to be obtained from your account and poplated in Heroku
-    - `AWS_ACCESS_KEY_ID` - 
-    - `AWS_SECRET_ACCESS_KEY` -
-    - `USE_AWS` - 
-    - `AWS_STORAGE_BUCKET_NAME` - 
-    - `AWS_S3_REGION_NAME` - 
-    - `AWS_S3_CUSTOM_DOMAIN` - 
+    - `AWS_ACCESS_KEY_ID` - AWS Keys to be obtained from your account and poplated in Heroku
+    - `AWS_SECRET_ACCESS_KEY` - AWS Keys to be obtained from your account and poplated in Heroku
+    - `USE_AWS` - False
+    - `AWS_STORAGE_BUCKET_NAME` - AWS Keys to be obtained from your account and poplated in Heroku
+    - `AWS_S3_REGION_NAME` - AWS Keys to be obtained from your account and poplated in Heroku
+    - `AWS_S3_CUSTOM_DOMAIN` - AWS Keys to be obtained from your account and poplated in Heroku
     Email Keys to be obtained from your account and poplated in Heroku
-    - `EMAIL_HOST_PASS` - 
-    - `EMAIL_HOST_USER` - 
-    DJANGO Key to be obtained from settings.py of your project and poplated in Heroku
-    - `SECRET_KEY` - 
+    - `EMAIL_HOST_PASS` - Email Password
+    - `EMAIL_HOST_USER` - Email Username
+    - `SECRET_KEY` - DJANGO Key to be obtained from settings.py of your project and poplated in Heroku
     Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_PUBLIC_KEY` - 
-    - `STRIPE_PUBLIC_KEY_LIVE` - 
-    - `STRIPE_SECRET_KEY` - 
-    - `STRIPE_SECRET_KEY_LIVE` - 
-    - `STRIPE_WH_SECRET` - 
+    - `STRIPE_PUBLIC_KEY` - Stripe Keys to be obtained from your account and poplated in Heroku
+    - `STRIPE_PUBLIC_KEY_LIVE` - Stripe Keys to be obtained from your account and poplated in Heroku
+    - `STRIPE_SECRET_KEY` - Stripe Keys to be obtained from your account and poplated in Heroku
+    - `STRIPE_SECRET_KEY_LIVE` - Stripe Keys to be obtained from your account and poplated in Heroku
+    - `STRIPE_WH_SECRET` - Stripe Keys to be obtained from your account and poplated in Heroku
 
 
 </details>
