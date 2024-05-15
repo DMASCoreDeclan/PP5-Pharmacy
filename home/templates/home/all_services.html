@@ -28,7 +28,7 @@
                     {% if service.content|safe|wordcount > 15 %}
                         <p class="card-text">{{ service.content|safe|truncatewords_html:15 }}</p>
                         <p>
-                            <a href="{% url 'service_detail' service.id %}" class="btn btn-purple link-purple" role="button" title="Read more of {{ service.title }}">Read More</a>
+                            <a href="{% url 'service_detail' service.id %}" class="btn btn-purple link-purple" role="button" title="Read more about {{ service.title }}">Read More about {{ services.title }}</a>
                         </p>
                     {% else %}
                         <p class="card-text">{{ service.content|safe }}</p>
