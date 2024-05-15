@@ -22,10 +22,6 @@ def order_px(request):
             please login')
         return redirect(reverse('account_login'))
 
-    if request.user.is_staff:
-        messages.error(request, 'Team members should not order PXs this way!')
-        return redirect(reverse('px_admin'))
-
     if request.method == 'POST':
         form = PxForm(request.POST, request.FILES, request.user)
         if form.is_valid():
