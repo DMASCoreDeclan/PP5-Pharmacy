@@ -15,9 +15,9 @@
 <details>
 <summary>Epics:</summary>
  
-- Epic 1: to replicate the site as is, not exactly, but enough to easily see the overlaps to appreciate the extra functionality provided in Epic 2.
-- Epic 2: to add CRUD to Prescription (PX) Management, Product Management, Service Management and Article Managment.  Epic 2 would enable to team in Phelans Pharmacy to keep the site updated without having to engage the services of a Developer.
-- Epic 3: Out of scope for this project, would be a Full Migration of all existing features in the current site and add a few more such as spcific reports to deal with increased PX and Product Orders
+- [Epic 1](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+1+-+Frontend+Replica): to replicate the site as is, not exactly, but enough to easily see the overlaps to appreciate the extra functionality provided in Epic 2.
+- [Epic 2](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+2+-+Backend+Features): to add CRUD to Prescription (PX) Management, Product Management, Service Management and Article Managment.  Epic 2 would enable to team in Phelans Pharmacy to keep the site updated without having to engage the services of a Developer.
+- [Epic 3](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+3+-+Add+additional+Reports+and+Refactor+existing+code): Out of scope for this project, would be a Full Migration of all existing features in the current site and add a few more such as spcific reports to deal with increased PX and Product Orders
 </details>
 
 <details>
@@ -38,13 +38,13 @@
 <details>
 <summary>READMEs</summary>
 
- - [CART README](cart/_docs/README.md)
- - [CHECKOUT README](checkout/_docs/README.md)
- - [HOME README](home/_docs/README.md)
- - [PHARMACY README](pharmacy/_docs/README.md)
- - [PRESCRIPTION README](prescription/_docs/README.md)
- - [PRODUCTS README](products/_docs/README.md)
- - [PROFILES README](profiles/_docs/README.md)
+ - [CART README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/cart/_docs/README.md)
+ - [CHECKOUT README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/checkout/_docs/README.md)
+ - [HOME README]()
+ - [PHARMACY README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/README.md)
+ - [PRESCRIPTION README]()
+ - [PRODUCTS README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/products/_docs/README.md)
+ - [PROFILES README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/profiles/_docs/README.md)
 
 </details>
 
