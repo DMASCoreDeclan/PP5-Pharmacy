@@ -1,5 +1,25 @@
 ![Phelans Pharmacy](/media/phelans-logo-high-cropped.png)
 
+  * [Project Background](#project-background)
+  * [Agile Methodology](#agile-methodology)
+  * [Wireframes Epic 2](#wireframes-epic-2)
+  * [Entity Relationship Diagram](#entity-relationship-diagram)
+  * [Testing](#testing)
+  * [SEO](#seo)
+  * [Facebook](#facebook)
+  * [Deployment](#deployment)
+    + [Local Deployment](#local-deployment)
+    + [Heroku Deployment](#heroku-deployment)
+    + [Database](#database)
+    + [Environment Variables](#environment-variables)
+  * [READMEs](#readmes)
+- [Technologies Used](#technologies-used)
+  * [Core Development Technologies](#core-development-technologies)
+  * [Python/Django Packages, Libraries, Frameworks and CDNs](#python-django-packages--libraries--frameworks-and-cdns)
+  * [Infrastructural Technologies](#infrastructural-technologies)
+  * [Credits](#credits)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ## Project Background
@@ -16,37 +36,27 @@
 <summary>Epics:</summary>
  
 - [Epic 1](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+1+-+Frontend+Replica): to replicate the site as is, not exactly, but enough to easily see the overlaps to appreciate the extra functionality provided in Epic 2.
-- [Epic 2](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+2+-+Backend+Features): to add CRUD to Prescription (PX) Management, Product Management, Service Management and Article Managment.  Epic 2 would enable to team in Phelans Pharmacy to keep the site updated without having to engage the services of a Developer.
-- [Epic 3](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+3+-+Add+additional+Reports+and+Refactor+existing+code): Out of scope for this project, would be a Full Migration of all existing features in the current site and add a few more such as spcific reports to deal with increased PX and Product Orders
+- [Epic 2](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+2+-+Backend+Features): to add CRUD to Prescription (PX) Management, Product Management, Service Management and Article Managment.  Epic 2 would enable the team in Phelans Pharmacy to keep the site updated without having to engage the services of a Developer.
+- [Epic 3](https://github.com/users/DMASCoreDeclan/projects/23/views/4?sliceBy%5Bvalue%5D=Epic+3+-+Add+additional+Reports+and+Refactor+existing+code): Out of scope for this project, would be a Full Migration of all existing features in the current site and add a few more such as specific reports to deal with increased PX and Product Orders
 </details>
 
 <details>
 <summary>Personas:</summary>
 
 - Persona 1: Site Owner AUX (is_superuser with access to /Admin)
+
+  ![AUX Credentials](_docs/aux-credentials.png)
+
 - Persona 2: Team Member TUX (is_staff Access to CRUD on the frontend)
+
+  ![TUX Credentials](_docs/tux-credentials.png)
+
 - Persona 3: Registered User RUX (Anonymous User with a Profile)
 - Persona 4: Anonymous User UX (Access to view everything)
 
 
 </details>
 
-## READMEs
-
-</details>
-
-<details>
-<summary>READMEs</summary>
-
- - [CART README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/cart/_docs/README.md)
- - [CHECKOUT README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/checkout/_docs/README.md)
- - [HOME README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/home/_docs/README.md)
- - [PHARMACY README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/README.md)
- - [PRESCRIPTION README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/prescription/_docs/README.md)
- - [PRODUCTS README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/products/_docs/README.md)
- - [PROFILES README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/profiles/_docs/README.md)
-
-</details>
 
 ## Agile Methodology
 
@@ -244,6 +254,7 @@ Any vistor who has the URL can see the home screen [Phelans | the Friendliest Ph
 <br>
 <br>
 
+
 </details>
  
 ## Entity Relationship Diagram
@@ -335,7 +346,7 @@ There are six apps within the project:
 
 - All testing is manual.
 - All testing took place on the deployed site in an incognito Chrome window.  A random selection of the tests were also carried out in Firefox and MS Edge to check the console.
-- I logged into every URL and every Form as a UX, RUX, TUX and AUX.  After each action, I checked the console, and where appropriate, I checked the databae in /admin, to ensure the backend did as expected.  
+- I logged into every URL and every Form as a UX, RUX, TUX and AUX.  After each action, I checked the console, and where appropriate, I checked the database in /admin, to ensure the backend did as expected.  
 - I performed 64 [Unit Tests and Scenario Tests](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/_docs/TESTING_REPORT.md) 
 - During the testing
 	1. **Easy** to fix, misspellings or obvious omissions, in .html/.py/.js/.css.  These fixed on the fly and captured in a commit
@@ -387,7 +398,7 @@ Positive validation from Nu Html Checker
 
 [Cartview](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fcartview%2F#l303c12)
 
-[Delete a Products](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fdelete_products%2F#l1c81694)
+[Delete Products](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fproducts%2Fdelete_products%2F#l1c81694)
 
 [Delete an Article](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fphelans-pharmacy-bf69b3045245.herokuapp.com%2Fdelete_articles%2F)
 
@@ -682,10 +693,10 @@ Positive validation from Nu Html Checker
   <details>
   <summary>Keyword Strategy</summary>
   
-- The site is bound by the Pharmaceutical Advertising Laws and Regulations Ireland  In essence, we can only advertise our non medical products, services and our ability to delivery any service ie we are friendly.
+- The site is bound by the Pharmaceutical Advertising Laws and Regulations Ireland. In essence, we can only advertise our non medical products, services and our ability to deliver any service ie we are friendly.
 - Social Media, Newsletters and Blog Articles would be the best.
 - Our customers are not online social media users for Medicines, only for gifts and other non medical products and services.
-- However, announcing a new service or the availability of a service should be marketed.  For example, a campaign saying “Latest Flu vaccine appointments are available from 25/10/5/today time, book your appointment here . . .” would be allowed
+- However, announcing a new service or the availability of a service should be marketed.  For example, a campaign saying “Latest Flu vaccine appointments are available from 25/10/5/, 09:00, book your appointment here . . .” would be allowed
 - We want to rank highly for anything that we sell within a 15 mile radius.  
 - We do not deliver non medical products, we DO deliver medical products.  
 - All our services are consumed within the confines of the premises.  Our products are available either at a competing pharmacy or in the case of non medical products, in supermarkets.  There is nothing distinguishable about what we sell EXCEPT HOW we deliver it – Service.  
@@ -704,7 +715,7 @@ Positive validation from Nu Html Checker
   
   •	Strategic use of semantics without keyword stuffing:
 
-  •	Articles and Product should be in bold H1s with < title > and < alt > being populated.
+  •	Articles, Services and Product should be in < stong> H1 < /stong>> tags with < title > and < alt > being populated.
 
   •	Articles, Services and Products should have keyword decriptions URLs (Use Slugs instead of PKs/IDs)
 
@@ -716,6 +727,13 @@ Positive validation from Nu Html Checker
 
   </details>
 
+  
+  <details>
+  <summary>Newsletter</summary>
+
+  Use mailchimp to create newsletter content to keep in touch with registered users.  Include Products, Services, Articles that have changed since the last newsletter
+
+  </details>
 
 </details>
 
@@ -782,25 +800,96 @@ Positive validation from Nu Html Checker
 - For Heroku deployment, you will need to set the environment variables through the Heroku CLI or through the Heroku dashboard under 'Config Vars'.  In addition, you will need an [AWS Account](https://eu-west-1.console.aws.amazon.com/s3/buckets?region=eu-west-1&bucketType=general&region=eu-west-1) to setup AWS Buckets, an [Email Account](https://support.google.com/mail/answer/56256?hl=en) for sending emails and a [Stripe Account](https://dashboard.stripe.com/apikeys) to connect to Stripe.  Setting up these Accounts and their components is beyond the scope of this README.  However should you have all of these accounts, you need to define the following variables:
   - If using a Postgres database:
     - `DATABASE_URL` - the URL for your Postgres database.
-    - `AWS_ACCESS_KEY_ID` - AWS Keys to be obtained from your account and poplated in Heroku
-    - `AWS_SECRET_ACCESS_KEY` - AWS Keys to be obtained from your account and poplated in Heroku
+    - `AWS_ACCESS_KEY_ID` - AWS Keys to be obtained from your account and populated in Heroku
+    - `AWS_SECRET_ACCESS_KEY` - AWS Keys to be obtained from your account and populated in Heroku
     - `USE_AWS` - False
-    - `AWS_STORAGE_BUCKET_NAME` - AWS Keys to be obtained from your account and poplated in Heroku
-    - `AWS_S3_REGION_NAME` - AWS Keys to be obtained from your account and poplated in Heroku
-    - `AWS_S3_CUSTOM_DOMAIN` - AWS Keys to be obtained from your account and poplated in Heroku
-    Email Keys to be obtained from your account and poplated in Heroku
+    - `AWS_STORAGE_BUCKET_NAME` - AWS Keys to be obtained from your account and populated in Heroku
+    - `AWS_S3_REGION_NAME` - AWS Keys to be obtained from your account and populated in Heroku
+    - `AWS_S3_CUSTOM_DOMAIN` - AWS Keys to be obtained from your account and populated in Heroku
+    Email Keys to be obtained from your account and populated in Heroku
     - `EMAIL_HOST_PASS` - Email Password
     - `EMAIL_HOST_USER` - Email Username
-    - `SECRET_KEY` - DJANGO Key to be obtained from settings.py of your project and poplated in Heroku
-    Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_PUBLIC_KEY` - Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_PUBLIC_KEY_LIVE` - Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_SECRET_KEY` - Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_SECRET_KEY_LIVE` - Stripe Keys to be obtained from your account and poplated in Heroku
-    - `STRIPE_WH_SECRET` - Stripe Keys to be obtained from your account and poplated in Heroku
+    - `SECRET_KEY` - DJANGO Key to be obtained from settings.py of your project and populated in Heroku
+    Stripe Keys to be obtained from your account and populated in Heroku
+    - `STRIPE_PUBLIC_KEY` - Stripe Keys to be obtained from your account and populated in Heroku
+    - `STRIPE_PUBLIC_KEY_LIVE` - Stripe Keys to be obtained from your account and populated in Heroku
+    - `STRIPE_SECRET_KEY` - Stripe Keys to be obtained from your account and populated in Heroku
+    - `STRIPE_SECRET_KEY_LIVE` - Stripe Keys to be obtained from your account and populated in Heroku
+    - `STRIPE_WH_SECRET` - Stripe Keys to be obtained from your account and populated in Heroku
 
 
 </details>
+
+## READMEs
+<details>
+<summary>Other READMEs</summary>
+
+ - [CART README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/cart/_docs/README.md)
+ - [CHECKOUT README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/checkout/_docs/README.md)
+ - [HOME README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/home/_docs/README.md)
+ - [PHARMACY README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/README.md)
+ - [PRESCRIPTION README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/prescription/_docs/README.md)
+ - [PRODUCTS README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/products/_docs/README.md)
+ - [PROFILES README](https://github.com/DMASCoreDeclan/PP5-Pharmacy/blob/main/profiles/_docs/README.md)
+
+
+</details>
+
+
+# Technologies Used
+
+This section outlines the various technologies used throughout the project and the purpose each serves.
+
+## Core Development Technologies
+
+<details>
+
+- [Django](https://www.djangoproject.com/) used as a full-stack framework for developing the app.
+- [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) used for client-side interaction and validation.
+- [HTML](https://html.spec.whatwg.org/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) + [Django Template Language](https://docs.djangoproject.com/en/4.2/ref/templates/language/) used for building out site pages.
+
+</details>
+
+## Python/Django Packages, Libraries, Frameworks and CDNs
+
+<details>
+
+- [crispy-bootstrap5](https://django-crispy-forms.readthedocs.io/en/latest/) - Django-crispy-forms provides you with a |crispy filter and {% crispy %} tag that will let you control the rendering behavior of your Django forms in a very elegant and DRY way
+- [dj-database-url](https://pypi.org/project/dj-database-url/) - This simple Django utility allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+- [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) - Django Cloudinary Storage is a Django package that facilitates integration with Cloudinary by implementing Django Storage API
+- [django-allauth](https://docs.allauth.org/en/latest/) - A fully integrated Django authentication app that allows for both local and social authentication, with flows that just work, beautifully!
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Django-crispy-forms provides you with a |crispy filter and {% crispy %} tag that will let you control the rendering behavior of your Django forms in a very elegant and DRY way
+- [django-summernote](https://pypi.org/project/django-summernote/) - Summernote is a JavaScript library that helps you create WYSIWYG editors online.
+- [gunicorn](https://gunicorn.org/) - Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX
+- [oauthlib](https://pypi.org/project/oauthlib/) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic
+- [psycopg2](https://pypi.org/project/psycopg2/) - Psycopg is the most popular PostgreSQL database adapter for the Python programming language
+- [PyJWT](https://pyjwt.readthedocs.io/) - Python library which allows you to encode and decode JSON Web Tokens (JWT)
+- [FavIcon](https://favicon.io/) - Quickly generate your favicon from text, image, or choose from hundreds of emoji
+- [Google Fonts](https://fonts.google.com/) - High-quality google fonts to use on your web site.
+- [Font Awesome](https://fontawesome.com/) - Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators
+- [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) - Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites
+- [Tables Generator](https://www.tablesgenerator.com/markdown_tables) 
+- [About](https://www.tablesgenerator.com/about)
+
+
+</details>
+
+## Infrastructural Technologies
+
+<details>
+
+- [PostgreSQL](https://www.postgresql.org/docs/12/) Current version provided by [Code Institute PostgresSQL](https://dbs.ci-dbs.net/)   (Originally on [ElephantSQL](https://www.elephantsql.com/) until v12 became unavailable.)  
+- [Stripe](https://stripe.com/ie) - used for Credit Card Payments
+- [Heroku](https://www.heroku.com/) - used for hosting the application.
+- [Amazon S3](https://aws.amazon.com/s3/) - used for storing static files and media files.
+
+</details>
+</details>
+
+
+<details>
+
 
 ## Credits
 <details>
